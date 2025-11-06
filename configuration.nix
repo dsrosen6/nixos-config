@@ -1,7 +1,11 @@
 { pkgs, ... }:
+let
+  home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-25.05.tar.gz";
+in
 {
   imports = [
     ./hardware-configuration.nix
+    (import "${home-manager}/nixos")
   ];
 
   boot.loader.systemd-boot.enable = true;
@@ -72,6 +76,13 @@
     printing.enable = true;
   };
 
+  home-manager = {
+    useUserPackages = true;
+    useGlobalPkgs = true;
+    backupFileExtension = "backup";
+    users.danny = import ./home.nix;
+  };
+
   security = {
     rtkit.enable = true;
   };
@@ -90,6 +101,7 @@
 
   environment.systemPackages = with pkgs; [
     home-manager
+    killall
     wl-clipboard
     unzip
     neovim
@@ -99,8 +111,6 @@
     wget
     fzf
 
-    hyprpolkitagent
-    hyprpaper
     nerd-fonts.jetbrains-mono
     rofi
 
@@ -141,7 +151,6 @@
     xwayland.enable = true;
   };
 
-  services.hypridle.enable = true;
   services.flatpak.enable = true;
 
   system.stateVersion = "25.05";
