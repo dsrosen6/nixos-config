@@ -23,6 +23,7 @@
       lazygit
       jetbrains.goland
       swaylock
+      rofi
     ];
   };
 
@@ -36,7 +37,6 @@
   };
 
   programs = {
-    rofi.enable = true;
     swaylock.enable = true;
   };
 
