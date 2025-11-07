@@ -1,0 +1,63 @@
+
+@import "macchiato.css";
+@define-color bar-color @mantle;
+@define-color light-text @subtext1;
+@define-color dark-text @mantle;
+@define-color accent-text @sapphire;
+@define-color warning-text @yellow;
+@define-color critical-text @red;
+
+* {
+    font-family:"JetBrainsMono Nerd Font";
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.modules-right {
+    margin-right: 15px;
+}
+
+.modules-left {
+    margin-left: 15px;
+}
+
+window#waybar {
+    background: @bar-color;
+}
+
+#clock,
+#pulseaudio,
+#network,
+#battery,
+#submap,
+#custom-spotify {
+    margin: 6 10px;
+    color: @light-text;
+}
+
+#battery.warning {
+    color: @warning-text;
+}
+
+#battery.critical {
+    color: @critical-text;
+}
+
+#workspaces {
+    padding: 0 0px;
+    margin: 0px;
+    margin-right: 6px;
+}
+
+#workspaces button,
+#workspaces button.active {
+    padding: 0 1px;
+}
+
+#workspaces button {
+    color: @light-text;
+}
+
+#workspaces button.active {
+    color: @accent-text;
+}

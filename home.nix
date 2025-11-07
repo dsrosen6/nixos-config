@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 {
   home = {
     username = "danny";
@@ -43,5 +43,7 @@
   xdg.configFile = {
     "swaylock/config".source = ./configs/swaylock/config;
     "hypr".source = ./configs/hypr;
+    "rofi".source = ./configs/rofi;
+    "waybar".source = ./configs/waybar;
   };
 }
