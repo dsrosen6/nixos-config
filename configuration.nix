@@ -112,13 +112,6 @@ in
     fzf
 
     nerd-fonts.jetbrains-mono
-    rofi
-
-    gh
-    python314
-    go
-    nodejs
-    lazygit
 
     cargo
     nixfmt-rfc-style

@@ -4,9 +4,29 @@
     username = "danny";
     homeDirectory = "/home/danny";
     stateVersion = "25.05";
+
+    pointerCursor = {
+      gtk.enable = true;
+      package = pkgs.bibata-cursors;
+      name = "Bibata-Modern-Classic";
+      size = 24;
+    };
+
+    packages = with pkgs; [
+      playerctl
+      spotify
+      gh
+      python314
+      gobject-introspection
+      go
+      nodejs
+      lazygit
+      jetbrains.goland
+    ];
   };
 
   services = {
+    cliphist.enable = true;
     hyprpolkitagent.enable = true;
     hyprpaper = {
       enable = true;
@@ -42,6 +62,9 @@
         ];
       };
     };
+  };
 
+  programs = {
+    rofi.enable = true;
   };
 }
