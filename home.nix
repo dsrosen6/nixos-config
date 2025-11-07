@@ -22,49 +22,26 @@
       nodejs
       lazygit
       jetbrains.goland
+      swaylock
     ];
   };
 
   services = {
     cliphist.enable = true;
+    swaync.enable = true;
     hyprpolkitagent.enable = true;
-    hyprpaper = {
-      enable = true;
-      settings = {
-        preload = [ ".config/wallpapers/windwaker-island.jpg" ];
-        wallpaper = [ ", .config/wallpapers/windwaker-island.jpg" ];
-      };
-    };
-
-    hypridle = {
-      enable = true;
-      settings = {
-        general = {
-          lock_cmd = "pidof swaylock || swaylock";
-          before_sleep_cmd = "loginctl lock-session";
-          after_sleep_cmd = "hyprctl dispatch dpms on";
-        };
-
-        listener = [
-          {
-            timeout = 300;
-            on-timeout = "loginctl lock-session";
-          }
-          {
-            timeout = 330;
-            on-timeout = "hyprctl dispatch dpms off";
-            on-resume = "hyprctl dispatch dpms on";
-          }
-          {
-            timeout = 600;
-            on-timeout = "systemctl suspend";
-          }
-        ];
-      };
-    };
+    hypridle.enable = true;
+    hyprpaper.enable = true;
+    hyprsunset.enable = true;
   };
 
   programs = {
     rofi.enable = true;
+    swaylock.enable = true;
+  };
+
+  xdg.configFile = {
+    "swaylock/config".source = ./configs/swaylock/config;
+    "hypr".source = ./configs/hypr;
   };
 }
