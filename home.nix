@@ -46,5 +46,6 @@
     "rofi".source = ./configs/rofi;
     "waybar".source = ./configs/waybar;
     "swaync".source = ./configs/swaync;
+    "cliphist".source = ./configs/cliphist;
   };
 }

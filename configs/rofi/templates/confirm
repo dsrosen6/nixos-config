@@ -4,7 +4,7 @@ theme_path="$HOME/.config/rofi/themes/confirm_prompt.rasi"
 
 msg=$1
 cmd=$2
-if ! pgrep rofi; then
+if ! pgrep -x rofi >/dev/null; then
     option=$(printf "Yes\nNo" | rofi -dmenu -i -theme $theme_path -p "$msg")
 
     case "$option" in
@@ -13,5 +13,5 @@ if ! pgrep rofi; then
     *) exit 1 ;;
     esac
 else
-    pkill rofi
+    pkill -x rofi
 fi

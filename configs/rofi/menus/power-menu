@@ -6,7 +6,7 @@ prompts="$HOME/.config/rofi/prompts/"
 lock_cmd="loginctl lock-session"
 sleep_cmd="systemctl suspend"
 
-if ! pgrep rofi; then
+if ! pgrep -x rofi >/dev/null; then
     option=$(printf "Lock\nSleep\nLog Out\nReboot\nShut Down" | rofi -dmenu -i -theme $theme_path -p "Power Menu")
 
     case "$option" in
@@ -18,5 +18,5 @@ if ! pgrep rofi; then
     *) exit 1 ;;
     esac
 else
-    pkill rofi
+    pkill -x rofi
 fi
