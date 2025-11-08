@@ -24,6 +24,21 @@
       jetbrains.goland
       swaylock
       rofi
+      chezmoi
+      neovim
+      vim
+      fzf
+      kitty
+      nerd-fonts.jetbrains-mono
+      cargo
+      nixfmt-rfc-style
+      statix
+      gcc
+      tmux
+      ripgrep
+      luarocks
+      fd
+      lua
     ];
   };
 

@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 {
   imports = [
     ./hardware-configuration.nix
@@ -100,24 +100,7 @@
     killall
     wl-clipboard
     unzip
-    neovim
-    kitty
-    vim
-    chezmoi
     wget
-    fzf
-
-    nerd-fonts.jetbrains-mono
-
-    cargo
-    nixfmt-rfc-style
-    statix
-    gcc
-    tmux
-    ripgrep
-    luarocks
-    fd
-    lua
   ];
 
   environment.variables = {
