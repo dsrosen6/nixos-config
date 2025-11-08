@@ -13,42 +13,43 @@
     };
 
     packages = with pkgs; [
-      playerctl
-      spotify
-      gh
-      python314
-      gobject-introspection
-      go
-      nodejs
-      lazygit
-      jetbrains.goland
-      swaylock
-      rofi
-      chezmoi
-      neovim
-      vim
-      fzf
-      kitty
-      nerd-fonts.jetbrains-mono
       cargo
-      nixfmt-rfc-style
-      statix
-      gcc
-      tmux
-      ripgrep
-      luarocks
+      chezmoi
+      fastfetch
       fd
+      fzf
+      gcc
+      gh
+      go
+      gobject-introspection
+      jetbrains.goland
+      kitty
+      lazygit
       lua
+      luarocks
+      neovim
+      nerd-fonts.jetbrains-mono
+      nixfmt-rfc-style
+      nodejs
+      playerctl
+      python314
+      ripgrep
+      rofi
+      spotify
+      statix
+      swaylock
+      tmux
+      vim
     ];
   };
 
   services = {
     cliphist.enable = true;
-    swaync.enable = true;
-    hyprpolkitagent.enable = true;
     hypridle.enable = true;
     hyprpaper.enable = true;
+    hyprpolkitagent.enable = true;
     hyprsunset.enable = true;
+    swaync.enable = true;
   };
 
   programs = {
@@ -66,18 +67,18 @@
   };
 
   home.file = {
-    ".zshrc".source = ./configs/zshrc;
     ".tmux.conf".source = ./configs/tmux.conf;
+    ".zshrc".source = ./configs/zshrc;
   };
 
   xdg.configFile = {
+    "cliphist".source = ./configs/cliphist;
+    "hypr".source = ./configs/hypr;
     "kitty".source = ./configs/kitty;
     "nvim".source = ./configs/nvim;
-    "hypr".source = ./configs/hypr;
-    "cliphist".source = ./configs/cliphist;
     "rofi".source = ./configs/rofi;
-    "waybar".source = ./configs/waybar;
-    "swaync".source = ./configs/swaync;
     "swaylock/config".source = ./configs/swaylock/config;
+    "swaync".source = ./configs/swaync;
+    "waybar".source = ./configs/waybar;
   };
 }

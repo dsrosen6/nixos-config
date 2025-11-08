@@ -98,9 +98,9 @@
   environment.systemPackages = with pkgs; [
     home-manager
     killall
-    wl-clipboard
     unzip
     wget
+    wl-clipboard
   ];
 
   environment.variables = {
