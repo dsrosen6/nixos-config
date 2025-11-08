@@ -30,7 +30,7 @@ fi
 alias gitig="touch .gitignore && echo -e '*.env\n*.DS_Store\n.idea' >> .gitignore" # Create a .gitignore file with common entries
 
 # Linux-Specific
-alias nixconf="cd /etc/nixos/"
+alias nixconf="cd ~/.config/nixos/"
 alias nixbuild="sudo nixos-rebuild switch --flake ~/.config/nixos#nixos"
 
 # Go Env Vars

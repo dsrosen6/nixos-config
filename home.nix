@@ -67,6 +67,7 @@
 
   home.file = {
     ".zshrc".source = ./configs/zshrc;
+    ".tmux.conf".source = ./configs/tmux.conf;
   };
 
   xdg.configFile = {
