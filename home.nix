@@ -1,5 +1,13 @@
 { pkgs, ... }:
 {
+  gtk = {
+    enable = true;
+    iconTheme = {
+      package = pkgs.adwaita-icon-theme;
+      name = "Adwaita";
+    };
+  };
+
   home = {
     username = "danny";
     homeDirectory = "/home/danny";
