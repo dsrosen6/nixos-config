@@ -53,14 +53,30 @@
 
   programs = {
     swaylock.enable = true;
+    zsh = {
+      enable = true;
+      oh-my-zsh = {
+        enable = true;
+        plugins = [
+          "zsh-users/zsh-autosuggestions"
+          "zsh-users/zsh-syntax-highlighting"
+        ];
+      };
+    };
+  };
+
+  home.file = {
+    ".zshrc".source = ./configs/zshrc;
   };
 
   xdg.configFile = {
-    "swaylock/config".source = ./configs/swaylock/config;
+    "kitty".source = ./configs/kitty;
+    "nvim".source = ./configs/nvim;
     "hypr".source = ./configs/hypr;
+    "cliphist".source = ./configs/cliphist;
     "rofi".source = ./configs/rofi;
     "waybar".source = ./configs/waybar;
     "swaync".source = ./configs/swaync;
-    "cliphist".source = ./configs/cliphist;
+    "swaylock/config".source = ./configs/swaylock/config;
   };
 }
