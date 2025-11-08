@@ -25,6 +25,7 @@
       jetbrains.goland
       kitty
       lazygit
+      lf
       lua
       luarocks
       neovim
