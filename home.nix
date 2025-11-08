@@ -1,7 +1,18 @@
 { pkgs, ... }:
 {
+  imports = [
+    ./configs/zsh.nix
+  ];
+
   gtk = {
     enable = true;
+    theme = {
+      package = pkgs.magnetic-catppuccin-gtk.override {
+        tweaks = [ "macchiato" ];
+      };
+      name = "Catppuccin-GTK-Dark-Macchiato";
+    };
+
     iconTheme = {
       package = pkgs.adwaita-icon-theme;
       name = "Adwaita";
@@ -13,11 +24,18 @@
     homeDirectory = "/home/danny";
     stateVersion = "25.05";
 
+    sessionVariables = {
+      EDITOR = "nvim";
+      GOPATH = "$HOME/go";
+      PATH = "$HOME/bin:$GOPATH/bin:$PATH";
+    };
+
     pointerCursor = {
       gtk.enable = true;
       package = pkgs.bibata-cursors;
       name = "Bibata-Modern-Classic";
       size = 24;
+
     };
 
     packages = with pkgs; [
@@ -63,28 +81,27 @@
 
   programs = {
     swaylock.enable = true;
-    zsh = {
+    firefox.enable = true;
+    waybar.enable = true;
+
+    git = {
       enable = true;
-      oh-my-zsh = {
-        enable = true;
-        plugins = [
-          "zsh-users/zsh-autosuggestions"
-          "zsh-users/zsh-syntax-highlighting"
-        ];
+      extraConfig = {
+        user.name = "Danny Rosenthal";
+        user.email = "dsrosen6@gmail.com";
       };
     };
   };
 
   home.file = {
     ".tmux.conf".source = ./configs/tmux.conf;
-    ".zshrc".source = ./configs/zshrc;
   };
 
   xdg.configFile = {
+    "nvim".source = ./configs/nvim;
     "cliphist".source = ./configs/cliphist;
     "hypr".source = ./configs/hypr;
     "kitty".source = ./configs/kitty;
-    "nvim".source = ./configs/nvim;
     "rofi".source = ./configs/rofi;
     "swaylock/config".source = ./configs/swaylock/config;
     "swaync".source = ./configs/swaync;

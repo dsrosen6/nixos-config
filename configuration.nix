@@ -109,12 +109,9 @@
   };
 
   programs = {
-    nix-ld.enable = true;
-    firefox.enable = true;
-    waybar.enable = true;
     _1password-gui.enable = true;
-    git.enable = true;
     zsh.enable = true;
+    nix-ld.enable = true;
   };
 
   programs.hyprland = {
