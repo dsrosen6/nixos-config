@@ -78,6 +78,7 @@
     hyprpolkitagent.enable = true;
     hyprsunset.enable = true;
     swaync.enable = true;
+    swayosd.enable = true;
     easyeffects = {
       enable = true;
       preset = "thinkpad";
