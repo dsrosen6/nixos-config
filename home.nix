@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ lib, pkgs, ... }:
 {
   imports = [
     ./configs/zsh.nix
@@ -69,6 +69,10 @@
       tmux
       vim
     ];
+
+    activation.linkConfigs = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+      ln -sfn ~/nixos/configs/nvim ~/.config/nvim    
+    '';
   };
 
   services = {
@@ -104,7 +108,6 @@
   };
 
   xdg.configFile = {
-    "nvim".source = ./configs/nvim;
     "cliphist".source = ./configs/cliphist;
     "easyeffects/output/thinkpad.json".source = ./configs/easyeffects/thinkpad.json;
     "hypr".source = ./configs/hypr;

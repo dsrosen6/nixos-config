@@ -18,8 +18,8 @@
 
     shellAliases = {
       gitig = "touch .gitignore && echo -e '*.env\n*.DS_Store\n.idea' >> .gitignore";
-      nixconf = "cd ~/.config/nixos/";
-      nixbuild = "sudo nixos-rebuild switch --flake ~/.config/nixos#nixos";
+      nixconf = "cd ~/nixos/";
+      nixbuild = "sudo nixos-rebuild switch --flake ~/nixos#nixos";
     };
   };
 }
