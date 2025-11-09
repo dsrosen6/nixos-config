@@ -59,6 +59,7 @@
       nerd-fonts.jetbrains-mono
       nixfmt-rfc-style
       nodejs
+      pavucontrol
       playerctl
       python314
       ripgrep
