@@ -39,6 +39,7 @@
     };
 
     packages = with pkgs; [
+      brightnessctl
       cargo
       chezmoi
       fastfetch
@@ -77,6 +78,10 @@
     hyprpolkitagent.enable = true;
     hyprsunset.enable = true;
     swaync.enable = true;
+    easyeffects = {
+      enable = true;
+      preset = "thinkpad";
+    };
   };
 
   programs = {
@@ -100,6 +105,7 @@
   xdg.configFile = {
     "nvim".source = ./configs/nvim;
     "cliphist".source = ./configs/cliphist;
+    "easyeffects/output/thinkpad.json".source = ./configs/easyeffects/thinkpad.json;
     "hypr".source = ./configs/hypr;
     "kitty".source = ./configs/kitty;
     "rofi".source = ./configs/rofi;
