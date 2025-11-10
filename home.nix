@@ -47,6 +47,7 @@
       fzf
       gcc
       gh
+      ghostty
       go
       gobject-introspection
       jetbrains.goland
@@ -111,6 +112,7 @@
   xdg.configFile = {
     "cliphist".source = ./configs/cliphist;
     "easyeffects/output/thinkpad.json".source = ./configs/easyeffects/thinkpad.json;
+    "ghostty".source = ./configs/ghostty;
     "hypr".source = ./configs/hypr;
     "kitty".source = ./configs/kitty;
     "rofi".source = ./configs/rofi;
