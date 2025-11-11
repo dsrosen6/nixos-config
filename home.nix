@@ -73,7 +73,8 @@
     ];
 
     activation.linkConfigs = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-      ln -sfn ~/nixos/configs/nvim ~/.config/nvim    
+      ln -sfn ~/nixos/configs/nvim ~/.config/nvim
+      ln -sfn ~/nixos/configs/waybar ~/.config/waybar
     '';
   };
 
@@ -118,6 +119,5 @@
     "rofi".source = ./configs/rofi;
     "swaylock/config".source = ./configs/swaylock/config;
     "swaync".source = ./configs/swaync;
-    "waybar".source = ./configs/waybar;
   };
 }

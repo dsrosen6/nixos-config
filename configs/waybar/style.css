@@ -1,38 +1,61 @@
-
 @import "macchiato.css";
-@define-color bar-color @mantle;
-@define-color light-text @subtext1;
-@define-color dark-text @mantle;
+@define-color module-color @mantle;
+@define-color border-color @surface0;
+@define-color primary-text @subtext1;
+@define-color emphasis-text @text;
 @define-color accent-text @sapphire;
 @define-color warning-text @yellow;
 @define-color critical-text @red;
+@define-color active-ws @sapphire;
+@define-color used-ws @subtext1;
+@define-color empty-ws @overlay0;
+@define-color urgent-ws @yellow;
 
 * {
     font-family:"JetBrainsMono Nerd Font";
     font-weight: 600;
-    font-size: 18px;
-}
-
-.modules-right {
-    margin-right: 15px;
-}
-
-.modules-left {
-    margin-left: 15px;
+    font-size: 17px;
 }
 
 window#waybar {
-    background: @bar-color;
+    background: none;
+}
+
+.modules-right {
+    margin-right: 8px;
 }
 
 #clock,
 #pulseaudio,
 #network,
 #battery,
-#submap,
-#custom-spotify {
-    margin: 6 10px;
-    color: @light-text;
+#workspaces {
+    margin: 0px 3px;
+    padding: 3px 9px;
+    border-radius: 10px;
+    background: @module-color;
+    color: @primary-text;
+}
+
+#clock,
+#pulseaudio,
+#network,
+#battery {
+    border: 2px solid @border-color;
+}
+
+
+
+#clock:hover,
+#pulseaudio:hover,
+#network:hover,
+#battery:hover,
+#custom-nix:hover {
+    color: @emphasis-text;
+}
+
+#battery {
+    margin-right: 0px;
 }
 
 #battery.warning {
@@ -43,21 +66,59 @@ window#waybar {
     color: @critical-text;
 }
 
-#workspaces {
-    padding: 0 0px;
-    margin: 0px;
+.modules-left {
+    margin-left: 8px;
+    border: 2px solid @border-color;
+    border-radius: 10;
+    background: @module-color;
+}
+
+.modules-left:hover {
+    border-color: @accent-text;
+}
+
+#custom-nix {
+    margin-left: 8px;
     margin-right: 6px;
+    color: @primary-text;
+    font-size: 20px;
+}
+
+#custom-nix:hover {
+    color: @accent-text;
+}
+
+#workspaces {
+    margin-left: 0px;
+    margin-right: 6px;
+    padding: 3px 5px;
 }
 
 #workspaces button,
 #workspaces button.active {
-    padding: 0 1px;
+    padding: 1px 0px;
+    margin-left: 3px;
+    margin-right: 1px;
+    border-radius: 0;
 }
 
 #workspaces button {
-    color: @light-text;
+    color: @used-ws;
+    border-bottom: 2px solid transparent;
+}
+
+#workspaces button.empty {
+    color: @empty-ws;
+}
+
+#workspaces button:hover {
+    background: none;
+    box-shadow: none;
+    color: @used-ws;
+    border-bottom: 2px solid @used-ws;
 }
 
 #workspaces button.active {
-    color: @accent-text;
+    color: @active-ws;
+    border-bottom: 2px solid @active-ws;
 }
