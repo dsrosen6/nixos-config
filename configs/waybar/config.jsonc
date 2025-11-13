@@ -2,20 +2,19 @@
 {
     "layer": "top",
     "position": "top",
-    "margin-top": 4,
+    "margin-top": 0,
     "margin-left": 0,
     "margin-right": 0,
     "modules-left": [
         "custom/nix",
         "hyprland/workspaces"
     ],
-    "modules-center": [
-        "clock"
-    ],
+    "modules-center": [],
     "modules-right": [
         "pulseaudio",
         "network",
-        "battery"
+        "battery",
+        "clock"
     ],
     "hyprland/workspaces": {
         "disable-scroll": true,
@@ -101,7 +100,7 @@
     "clock": {
         "format": "{:%I:%M}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        "format-alt": "{:%d|%I:%M}"
     },
     "custom/nix": {
         "format": "󱄅",

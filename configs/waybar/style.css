@@ -1,5 +1,6 @@
 @import "macchiato.css";
-@define-color module-color @mantle;
+@define-color pill-color rgba(30, 32, 48, 0.9);
+@define-color bar-color rgba(30, 32, 48, 0.3);
 @define-color border-color @surface0;
 @define-color primary-text @subtext1;
 @define-color emphasis-text @text;
@@ -15,25 +16,73 @@
     font-family:"JetBrainsMono Nerd Font";
     font-weight: 600;
     font-size: 16px;
+    border-radius: 8px;
 }
 
 window#waybar {
-    background: transparent;
+    background: @bar-color;
 }
 
-.modules-right {
+
+/* Left Section */
+.modules-left {
+    padding: 0px 4px 0px 8px;
+    margin: 3px 8px;
+    border: 2px solid @border-color;
+    background: @pill-color;
+}
+
+#custom-nix {
     margin-right: 8px;
+    color: @primary-text;
+}
+
+#custom-nix:hover {
+    color: @accent-text;
+}
+
+#workspaces {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+#workspaces button,
+#workspaces button.active {
+    padding: 0px 0px;
+    margin: 0px 1px;
+}
+
+#workspaces button {
+    color: @used-ws;
+}
+
+#workspaces button.empty {
+    color: @empty-ws;
+}
+
+#workspaces button:hover {
+    background: none;
+    box-shadow: none;
+    color: @used-ws;
+}
+
+#workspaces button.active {
+    color: @active-ws;
+}
+
+/* Right Section */
+.modules-right {
+    padding: 3px 0px 3px 3px;
+    margin: 0px 8px;
 }
 
 #clock,
 #pulseaudio,
 #network,
-#battery,
-#workspaces {
+#battery {
     margin: 0px 3px;
     padding: 3px 9px;
-    border-radius: 10px;
-    background: @module-color;
+    background: @pill-color;
     color: @primary-text;
 }
 
@@ -44,17 +93,14 @@ window#waybar {
     border: 2px solid @border-color;
 }
 
-
-
 #clock:hover,
 #pulseaudio:hover,
 #network:hover,
-#battery:hover,
-#custom-nix:hover {
+#battery:hover {
     color: @emphasis-text;
 }
 
-#battery {
+#clock {
     margin-right: 0px;
 }
 
@@ -66,59 +112,3 @@ window#waybar {
     color: @critical-text;
 }
 
-.modules-left {
-    margin-left: 8px;
-    border: 2px solid @border-color;
-    border-radius: 10;
-    background: @module-color;
-}
-
-.modules-left:hover {
-    border-color: @accent-text;
-}
-
-#custom-nix {
-    margin-left: 8px;
-    margin-right: 6px;
-    color: @primary-text;
-    font-size: 20px;
-}
-
-#custom-nix:hover {
-    color: @accent-text;
-}
-
-#workspaces {
-    margin-left: 0px;
-    margin-right: 6px;
-    padding: 3px 5px;
-}
-
-#workspaces button,
-#workspaces button.active {
-    padding: 1px 0px;
-    margin-left: 3px;
-    margin-right: 1px;
-    border-radius: 0;
-}
-
-#workspaces button {
-    color: @used-ws;
-    border-bottom: 2px solid transparent;
-}
-
-#workspaces button.empty {
-    color: @empty-ws;
-}
-
-#workspaces button:hover {
-    background: none;
-    box-shadow: none;
-    color: @used-ws;
-    border-bottom: 2px solid @used-ws;
-}
-
-#workspaces button.active {
-    color: @active-ws;
-    border-bottom: 2px solid @active-ws;
-}

@@ -75,6 +75,7 @@
     activation.linkConfigs = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
       ln -sfn ~/nixos/configs/nvim ~/.config/nvim
       ln -sfn ~/nixos/configs/waybar ~/.config/waybar
+      ln -sfn ~/nixos/configs/hypr ~/.config/hypr
     '';
   };
 
@@ -114,7 +115,6 @@
     "cliphist".source = ./configs/cliphist;
     "easyeffects/output/thinkpad.json".source = ./configs/easyeffects/thinkpad.json;
     "ghostty".source = ./configs/ghostty;
-    "hypr".source = ./configs/hypr;
     "kitty".source = ./configs/kitty;
     "rofi".source = ./configs/rofi;
     "swaylock/config".source = ./configs/swaylock/config;
