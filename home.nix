@@ -1,7 +1,7 @@
 { lib, pkgs, ... }:
 {
   imports = [
-    ./configs/zsh.nix
+    ./dotfiles/zsh.nix
   ];
 
   gtk = {
@@ -74,10 +74,9 @@
       vim
     ];
 
-    activation.linkConfigs = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-      ln -sfn ~/nixos/configs/nvim ~/.config/nvim
-      ln -sfn ~/nixos/configs/waybar ~/.config/waybar
-      ln -sfn ~/nixos/configs/hypr ~/.config/hypr
+    activation.linkconfigs = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+      ln -sfn ~/nixos/dotfiles/nvim ~/.config/nvim
+      ln -sfn ~/nixos/dotfiles/waybar ~/.config/waybar
     '';
   };
 
@@ -110,16 +109,16 @@
   };
 
   home.file = {
-    ".tmux.conf".source = ./configs/tmux.conf;
+    ".tmux.conf".source = ./dotfiles/tmux.conf;
   };
 
   xdg.configFile = {
-    "cliphist".source = ./configs/cliphist;
-    "easyeffects/output/thinkpad.json".source = ./configs/easyeffects/thinkpad.json;
-    "ghostty".source = ./configs/ghostty;
-    "kitty".source = ./configs/kitty;
-    "rofi".source = ./configs/rofi;
-    "swaylock/config".source = ./configs/swaylock/config;
-    "swaync".source = ./configs/swaync;
+    "cliphist".source = ./dotfiles/cliphist;
+    "hypr".source = ./dotfiles/hypr;
+    "easyeffects/output/thinkpad.json".source = ./dotfiles/easyeffects/thinkpad.json;
+    "ghostty".source = ./dotfiles/ghostty;
+    "rofi".source = ./dotfiles/rofi;
+    "swaylock/config".source = ./dotfiles/swaylock/config;
+    "swaync".source = ./dotfiles/swaync;
   };
 }

@@ -1,4 +1,3 @@
-{ pkgs, ... }:
 {
   programs.zsh = {
     enable = true;
@@ -19,7 +18,7 @@
     shellAliases = {
       gitig = "touch .gitignore && echo -e '*.env\n*.DS_Store\n.idea' >> .gitignore";
       nixconf = "cd ~/nixos/";
-      nixbuild = "sudo nixos-rebuild switch --flake ~/nixos#nixos";
+      nb = "sudo nixos-rebuild switch --flake ~/nixos#nixos";
     };
   };
 }
