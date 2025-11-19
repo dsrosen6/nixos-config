@@ -40,6 +40,7 @@
 
     packages = with pkgs; [
       brightnessctl
+      btop
       cargo
       chezmoi
       fastfetch
