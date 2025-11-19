@@ -1,5 +1,5 @@
 @import "macchiato.css";
-@define-color pill-color rgba(30, 32, 48, 0.9);
+@define-color pill-color rgba(30, 32, 48, 0.4);
 @define-color bar-color rgba(30, 32, 48, 0.3);
 @define-color border-color @surface0;
 @define-color primary-text @subtext1;
@@ -27,7 +27,7 @@ window#waybar {
 /* Left Section */
 .modules-left {
     padding: 0px 4px 0px 8px;
-    margin: 3px 8px;
+    margin: 4px 8px;
     border: 2px solid @border-color;
     background: @pill-color;
 }
@@ -72,7 +72,7 @@ window#waybar {
 
 /* Right Section */
 .modules-right {
-    padding: 3px 0px 3px 3px;
+    padding: 4px 0px 4px 3px;
     margin: 0px 8px;
 }
 
