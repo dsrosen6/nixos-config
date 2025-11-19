@@ -67,6 +67,7 @@
       ripgrep
       rofi
       spotify
+      sqlc
       statix
       swaylock
       tmux
