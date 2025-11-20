@@ -92,6 +92,39 @@
       enable = true;
       preset = "thinkpad";
     };
+    kanshi = {
+      enable = false;
+      systemdTarget = "xdg-desktop-portal-hyprland.service";
+      settings = [
+        {
+          profile = {
+            name = "docked";
+            outputs = [
+              {
+                criteria = "eDP-1";
+                status = "disable";
+              }
+              {
+                criteria = "DP-1";
+                position = "0,0";
+              }
+            ];
+          };
+        }
+        {
+          profile = {
+            name = "undocked";
+            outputs = [
+              {
+                criteria = "eDP-1";
+                status = "enable";
+                position = "0,0";
+              }
+            ];
+          };
+        }
+      ];
+    };
   };
 
   programs = {
@@ -106,6 +139,7 @@
         user.email = "dsrosen6@gmail.com";
       };
     };
+
   };
 
   home.file = {
