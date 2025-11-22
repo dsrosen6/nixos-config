@@ -57,7 +57,6 @@ in
       jetbrains.goland
       kitty
       lazygit
-      lf
       lua
       luarocks
       neovim
@@ -131,8 +130,9 @@ in
   };
 
   programs = {
-    swaylock.enable = true;
+    yazi.enable = true;
     firefox.enable = true;
+    swaylock.enable = true;
     waybar.enable = true;
 
     git = {
