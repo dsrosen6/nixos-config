@@ -1,10 +1,11 @@
 { lib, pkgs, ... }:
 let
   dotfiles = ../../dotfiles;
+  hmodules = ../home-manager;
 in
 {
   imports = [
-    "${dotfiles}/zsh.nix"
+    "${hmodules}/zsh.nix"
   ];
 
   gtk = {
