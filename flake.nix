@@ -14,10 +14,10 @@
     }:
     {
       nixosConfigurations = {
-        laptop = nixpkgs.lib.nixosSystem {
+        thinkpad = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
-            ./hosts/thinkpad-t14/config.nix
+            ./hosts/thinkpad/config.nix
             home-manager.nixosModules.home-manager
           ];
         };
