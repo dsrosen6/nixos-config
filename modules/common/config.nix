@@ -1,8 +1,6 @@
 { pkgs, ... }:
 {
-  imports = [
-    ./hardware-configuration.nix
-  ];
+  imports = [ ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -86,7 +84,7 @@
     useUserPackages = true;
     useGlobalPkgs = true;
     backupFileExtension = "backup";
-    users.danny = import ./home.nix;
+    users.danny = import ../home-manager/home.nix;
   };
 
   security = {
