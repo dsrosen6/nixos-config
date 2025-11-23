@@ -1,0 +1,24 @@
+{
+  services.keyd = {
+    enable = true;
+    keyboards = {
+      default = {
+        ids = [ "*" ];
+        settings = {
+          main = {
+            capslock = "overload(meta, esc)";
+            leftalt = "leftcontrol";
+            leftmeta = "leftalt";
+            leftcontrol = "layer(arrows)";
+          };
+          "arrows:C" = {
+            h = "left";
+            j = "down";
+            k = "up";
+            l = "right";
+          };
+        };
+      };
+    };
+  };
+}

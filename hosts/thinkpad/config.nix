@@ -1,6 +1,8 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ../../modules/common/config.nix
+    ../../modules/nixos/common.nix
+    ../../modules/nixos/pkgs.nix
+    ../../modules/nixos/keyd.nix
   ];
 }

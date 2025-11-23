@@ -1,6 +1,9 @@
 { pkgs, ... }:
 {
-  imports = [ ];
+  imports = [
+    ./keyd.nix
+    ./pkgs.nix
+  ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -43,30 +46,6 @@
         layout = "us";
         variant = "";
       };
-
-    };
-
-    keyd = {
-      enable = true;
-      keyboards = {
-        default = {
-          ids = [ "*" ];
-          settings = {
-            main = {
-              capslock = "overload(meta, esc)";
-              leftalt = "leftcontrol";
-              leftmeta = "leftalt";
-              leftcontrol = "layer(arrows)";
-            };
-            "arrows:C" = {
-              h = "left";
-              j = "down";
-              k = "up";
-              l = "right";
-            };
-          };
-        };
-      };
     };
 
     pipewire = {
@@ -102,14 +81,6 @@
   };
 
   nixpkgs.config.allowUnfree = true;
-
-  environment.systemPackages = with pkgs; [
-    home-manager
-    killall
-    unzip
-    wget
-    wl-clipboard
-  ];
 
   environment.variables = {
     XCURSOR_THEME = "Bibata-Modern-Classic";
