@@ -1,7 +1,33 @@
-@import "macchiato.css";
+@define-color rosewater   #f4dbd6;
+@define-color flamingo    #f0c6c6;
+@define-color pink        #f5bde6;
+@define-color mauve       #c6a0f6;
+@define-color red         #ed8796;
+@define-color maroon      #ee99a0;
+@define-color peach       #f5a97f;
+@define-color yellow      #eed49f;
+@define-color green       #a6da95;
+@define-color teal        #8bd5ca;
+@define-color sky         #91d7e3;
+@define-color sapphire    #7dc4e4;
+@define-color blue        #8aadf4;
+@define-color lavender    #b7bdf8;
+@define-color text        #cad3f5;
+@define-color subtext1    #b8c0e0;
+@define-color subtext0    #a5adcb;
+@define-color overlay2    #939ab7;
+@define-color overlay1    #8087a2;
+@define-color overlay0    #6e738d;
+@define-color surface2    #5b6078;
+@define-color surface1    #494d64;
+@define-color surface0    #363a4f;
+@define-color base        #24273a;
+@define-color mantle      #1e2030;
+@define-color crust       #181926;
+
 @define-color pill-color rgba(30, 32, 48, 0.4);
 @define-color bar-color rgba(30, 32, 48, 0.3);
-@define-color border-color @surface0;
+@define-color border-color @overlay0;
 @define-color primary-text @subtext1;
 @define-color emphasis-text @text;
 @define-color accent-text @sapphire;
@@ -16,7 +42,6 @@
     font-family:"JetBrainsMono Nerd Font";
     font-weight: 600;
     font-size: 16px;
-    border-radius: 8px;
 }
 
 window#waybar {
@@ -25,11 +50,11 @@ window#waybar {
 
 
 /* Left Section */
-.modules-left {
-    padding: 0px 4px 0px 8px;
+.modules-left,
+.modules-right,
+.modules-center {
+    padding: 0px 0px 0px 8px;
     margin: 4px 8px;
-    border: 2px solid @border-color;
-    background: @pill-color;
 }
 
 #custom-nix {
@@ -70,37 +95,22 @@ window#waybar {
     color: @active-ws;
 }
 
-/* Right Section */
-.modules-right {
-    padding: 4px 0px 4px 3px;
-    margin: 0px 8px;
-}
-
 #clock,
 #pulseaudio,
 #network,
 #battery {
-    margin: 0px 3px;
-    padding: 3px 9px;
-    background: @pill-color;
+    padding: 3px 10px;
     color: @primary-text;
 }
 
-#clock,
 #pulseaudio,
 #network,
 #battery {
-    border: 2px solid @border-color;
+    border-right: 2px solid @border-color;
 }
 
-#clock:hover,
-#pulseaudio:hover,
-#network:hover,
-#battery:hover {
-    color: @emphasis-text;
-}
-
-#clock {
+#battery {
+    border-right: none;
     margin-right: 0px;
 }
 
@@ -111,4 +121,3 @@ window#waybar {
 #battery.critical {
     color: @critical-text;
 }
-

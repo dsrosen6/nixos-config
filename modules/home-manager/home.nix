@@ -5,6 +5,7 @@ in
 {
   imports = [
     ./zsh.nix
+    ./waybar/config.nix
   ];
 
   gtk = {
@@ -78,7 +79,6 @@ in
 
     activation.linkconfigs = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
       ln -sfn ${dotfiles}/nvim ~/.config/nvim
-      ln -sfn ${dotfiles}/waybar ~/.config/waybar
     '';
   };
 
@@ -130,10 +130,10 @@ in
   };
 
   programs = {
-    yazi.enable = true;
+    zoxide.enable = true;
     firefox.enable = true;
     swaylock.enable = true;
-    waybar.enable = true;
+    yazi.enable = true;
 
     git = {
       enable = true;
@@ -157,5 +157,6 @@ in
     "rofi".source = "${dotfiles}/rofi";
     "swaylock/config".source = "${dotfiles}/swaylock/config";
     "swaync".source = "${dotfiles}/swaync";
+    "waybar/style.css".source = ./waybar/style.css;
   };
 }
