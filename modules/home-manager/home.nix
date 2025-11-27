@@ -4,9 +4,10 @@ let
 in
 {
   imports = [
-    ./zsh.nix
     ./ghostty.nix
+    ./tmux.nix
     ./waybar/config.nix
+    ./zsh.nix
   ];
 
   gtk = {
@@ -73,7 +74,6 @@ in
       sqlc
       statix
       swaylock
-      tmux
       vim
     ];
 
@@ -143,10 +143,6 @@ in
       };
     };
 
-  };
-
-  home.file = {
-    ".tmux.conf".source = "${dotfiles}/tmux.conf";
   };
 
   xdg.configFile = {
