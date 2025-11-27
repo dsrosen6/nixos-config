@@ -5,6 +5,7 @@ in
 {
   imports = [
     ./ghostty.nix
+    ./hypr.nix
     ./tmux.nix
     ./waybar/config.nix
     ./zsh.nix
@@ -76,18 +77,10 @@ in
       swaylock
       vim
     ];
-
-    activation.linkconfigs = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-      ln -sfn ${dotfiles}/nvim ~/.config/nvim
-    '';
   };
 
   services = {
     cliphist.enable = true;
-    hypridle.enable = true;
-    hyprpaper.enable = true;
-    hyprpolkitagent.enable = true;
-    hyprsunset.enable = true;
     swaync.enable = true;
     swayosd.enable = true;
     easyeffects = {
@@ -147,7 +140,6 @@ in
 
   xdg.configFile = {
     "cliphist".source = "${dotfiles}/cliphist";
-    "hypr".source = "${dotfiles}/hypr";
     "easyeffects/output/thinkpad.json".source = "${dotfiles}/easyeffects/thinkpad.json";
     "rofi".source = "${dotfiles}/rofi";
     "swaylock/config".source = "${dotfiles}/swaylock/config";

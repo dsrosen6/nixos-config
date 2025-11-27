@@ -1,4 +1,11 @@
+let
+  stylePath = ../waybar/style.css;
+in
 {
+  xdg.configFile = {
+    "waybar/style.css".source = "${stylePath}";
+  };
+
   programs.waybar = {
     enable = true;
     settings.main = {
@@ -108,106 +115,5 @@
         tooltip-format = "btw";
       };
     };
-    style = ''
-      @define-color red         #ed8796;
-      @define-color yellow      #eed49f;
-      @define-color sapphire    #7dc4e4;
-      @define-color text        #cad3f5;
-      @define-color subtext1    #b8c0e0;
-      @define-color subtext0    #a5adcb;
-      @define-color overlay2    #939ab7;
-      @define-color overlay1    #8087a2;
-      @define-color overlay0    #6e738d;
-      @define-color surface2    #5b6078;
-      @define-color surface1    #494d64;
-      @define-color surface0    #363a4f;
-
-      @define-color bar-color rgba(30, 32, 48, 0.5);
-      @define-color border-color @surface0;
-      @define-color primary-text @subtext1;
-      @define-color emphasis-text @text;
-      @define-color accent-text @sapphire;
-      @define-color warning-text @yellow;
-      @define-color critical-text @red;
-      @define-color active-ws @sapphire;
-      @define-color used-ws @subtext1;
-      @define-color empty-ws @overlay0;
-      @define-color urgent-ws @yellow;
-
-      * {
-          font-family:"JetBrainsMono Nerd Font";
-          font-weight: 600;
-          font-size: 16px;
-          border-radius: 0px;
-      }
-
-      window#waybar {
-          background: @bar-color;
-      }
-
-
-      /* Left Section */
-      .modules-left,
-      .modules-right,
-      .modules-center {
-          padding: 0px 8px;
-          margin: 4px 8px;
-      }
-
-      #custom-nix {
-          margin-right: 8px;
-          color: @primary-text;
-      }
-
-      #custom-nix:hover {
-          color: @accent-text;
-      }
-
-      #workspaces {
-          margin-left: 0px;
-          margin-right: 0px;
-      }
-
-      #workspaces button {
-          margin: 1px 0px;
-          padding: 1px 1px;
-          border-bottom: 1px hidden;
-      }
-
-      #workspaces button {
-          color: @used-ws;
-      }
-
-      #workspaces button.empty {
-          color: @empty-ws;
-      }
-
-      #workspaces button:hover {
-          background: none;
-          box-shadow: none;
-          color: @used-ws;
-      }
-
-      #workspaces button.active {
-          color: @active-ws;
-          border-bottom: 1px solid @sapphire;
-      }
-
-      #clock,
-      #pulseaudio,
-      #network,
-      #battery {
-          padding: 2px 10px;
-          color: @primary-text;
-      }
-
-      #battery.warning {
-          color: @warning-text;
-      }
-
-      #battery.critical {
-          color: @critical-text;
-      }
-    '';
   };
 }
