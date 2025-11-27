@@ -1,14 +1,14 @@
-{ lib, pkgs, ... }:
+{ pkgs, ... }:
 let
-  dotfiles = ../../dotfiles;
+  dotfiles = ../dotfiles;
 in
 {
   imports = [
-    ./ghostty.nix
-    ./hypr.nix
-    ./tmux.nix
-    ./waybar/config.nix
-    ./zsh.nix
+    ./modules/ghostty.nix
+    ./modules/hypr.nix
+    ./modules/tmux.nix
+    ./modules/waybar.nix
+    ./modules/zsh.nix
   ];
 
   gtk = {
@@ -139,7 +139,6 @@ in
   };
 
   xdg.configFile = {
-    "cliphist".source = "${dotfiles}/cliphist";
     "easyeffects/output/thinkpad.json".source = "${dotfiles}/easyeffects/thinkpad.json";
     "rofi".source = "${dotfiles}/rofi";
     "swaylock/config".source = "${dotfiles}/swaylock/config";

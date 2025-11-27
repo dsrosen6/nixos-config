@@ -1,5 +1,5 @@
 let
-  stylePath = ../waybar/style.css;
+  stylePath = ../../dotfiles/waybar/style.css;
 in
 {
   xdg.configFile = {
