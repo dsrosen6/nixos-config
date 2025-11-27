@@ -5,6 +5,7 @@ in
 {
   imports = [
     ./zsh.nix
+    ./ghostty.nix
     ./waybar/config.nix
   ];
 
@@ -52,7 +53,6 @@ in
       fzf
       gcc
       gh
-      ghostty
       go
       gobject-introspection
       jetbrains.goland
@@ -153,7 +153,6 @@ in
     "cliphist".source = "${dotfiles}/cliphist";
     "hypr".source = "${dotfiles}/hypr";
     "easyeffects/output/thinkpad.json".source = "${dotfiles}/easyeffects/thinkpad.json";
-    "ghostty".source = "${dotfiles}/ghostty";
     "rofi".source = "${dotfiles}/rofi";
     "swaylock/config".source = "${dotfiles}/swaylock/config";
     "swaync".source = "${dotfiles}/swaync";
