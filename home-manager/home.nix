@@ -57,6 +57,7 @@ in
       gh
       go
       gobject-introspection
+      grimblast
       jetbrains.goland
       kitty
       lazygit
@@ -73,6 +74,7 @@ in
       rofi
       spotify
       sqlc
+      swappy
       statix
       swaylock
       vim
