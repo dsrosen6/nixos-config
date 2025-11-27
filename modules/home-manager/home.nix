@@ -157,6 +157,5 @@ in
     "rofi".source = "${dotfiles}/rofi";
     "swaylock/config".source = "${dotfiles}/swaylock/config";
     "swaync".source = "${dotfiles}/swaync";
-    "waybar/style.css".source = ./waybar/style.css;
   };
 }
