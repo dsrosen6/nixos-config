@@ -12,7 +12,6 @@ in
       layer = "top";
       position = "top";
       modules-left = [
-        "custom/nix"
         "hyprland/workspaces"
       ];
       modules-center = [

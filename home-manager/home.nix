@@ -74,7 +74,6 @@ in
       rofi
       spotify
       sqlc
-      swappy
       statix
       swaylock
       vim
