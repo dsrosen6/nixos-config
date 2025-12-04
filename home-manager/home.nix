@@ -34,6 +34,7 @@ in
     sessionVariables = {
       EDITOR = "nvim";
       GOPATH = "$HOME/go";
+      GOPROXY = "https://proxy.golang.org,direct";
       PATH = "$HOME/bin:$GOPATH/bin:$PATH";
     };
 
