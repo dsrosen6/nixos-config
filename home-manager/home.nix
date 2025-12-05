@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 let
   dotfiles = ../dotfiles;
 in
@@ -9,6 +9,7 @@ in
     ./modules/tmux.nix
     ./modules/waybar.nix
     ./modules/zsh.nix
+    ./modules/walker.nix
   ];
 
   gtk = {
@@ -57,7 +58,6 @@ in
       gcc
       gh
       go
-      gobject-introspection
       grimblast
       jetbrains.goland
       kitty
@@ -68,6 +68,7 @@ in
       nerd-fonts.jetbrains-mono
       nixfmt-rfc-style
       nodejs
+      obsidian
       pavucontrol
       playerctl
       python314

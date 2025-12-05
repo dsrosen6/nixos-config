@@ -64,13 +64,6 @@
     printing.enable = true;
   };
 
-  home-manager = {
-    useUserPackages = true;
-    useGlobalPkgs = true;
-    backupFileExtension = "backup";
-    users.danny = import ../home-manager/home.nix;
-  };
-
   security = {
     rtkit.enable = true;
   };
@@ -93,7 +86,9 @@
   };
 
   programs = {
+    # 1Password is in here because the Home Manager version won't link with browser extensions.
     _1password-gui.enable = true;
+    _1password.enable = true; # op CLI
     zsh.enable = true;
     nix-ld.enable = true;
   };

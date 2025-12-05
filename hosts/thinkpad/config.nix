@@ -1,3 +1,4 @@
+{ ... }:
 {
   imports = [
     ./hardware-configuration.nix
@@ -5,4 +6,10 @@
     ../../nixos/pkgs.nix
     ../../nixos/keyd.nix
   ];
+
+  home-manager = {
+    useGlobalPkgs = true;
+    useUserPackages = true;
+    users.danny = import ../../home-manager/home.nix;
+  };
 }

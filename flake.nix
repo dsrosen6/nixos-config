@@ -1,7 +1,12 @@
 {
   description = "NixOS Config";
   inputs = {
+    elephant.url = "github:abenz1267/elephant";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+    walker = {
+      url = "github:abenz1267/walker";
+      inputs.elephant.follows = "elephant";
+    };
     home-manager = {
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -13,7 +18,7 @@
       nixpkgs,
       home-manager,
       ...
-    }:
+    }@inputs:
     {
       nixosConfigurations = {
         thinkpad = nixpkgs.lib.nixosSystem {
@@ -21,6 +26,12 @@
           modules = [
             ./hosts/thinkpad/config.nix
             home-manager.nixosModules.home-manager
+
+            {
+              home-manager.extraSpecialArgs = {
+                inherit inputs;
+              };
+            }
           ];
         };
       };
