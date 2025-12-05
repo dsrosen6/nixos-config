@@ -73,7 +73,6 @@ in
       playerctl
       python314
       ripgrep
-      rofi
       spotify
       sqlc
       statix
@@ -143,7 +142,6 @@ in
 
   xdg.configFile = {
     "easyeffects/output/thinkpad.json".source = "${dotfiles}/easyeffects/thinkpad.json";
-    "rofi".source = "${dotfiles}/rofi";
     "swaylock/config".source = "${dotfiles}/swaylock/config";
     "swaync".source = "${dotfiles}/swaync";
   };

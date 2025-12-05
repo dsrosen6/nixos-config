@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-
-theme="$HOME/.config/rofi/themes/launcher.rasi"
-if ! pgrep -x rofi >/dev/null; then
-    rofi -show drun -theme $theme -run-command "uwsm-app -- {cmd}"
-else
-    pkill -x rofi
-fi

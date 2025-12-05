@@ -9,6 +9,7 @@ in
 
   xdg.configFile = {
     "walker/themes".source = "${dotfiles}/walker/themes";
+    "elephant/menus".source = "${dotfiles}/elephant/menus";
   };
 
   programs.walker = {
@@ -17,6 +18,7 @@ in
 
     config = {
       theme = "macchiato";
+      hide_quick_activation = true;
       providers = {
         default = [
           "desktopapplications"

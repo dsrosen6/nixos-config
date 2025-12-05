@@ -1,0 +1,27 @@
+name = "power"
+name_pretty = "Power Menu"
+
+[[entries]]
+text = "Lock"
+keywords = [ "lock" ]
+actions = { "lock" = "loginctl lock-session" }
+
+[[entries]]
+text = "Sleep"
+keywords = [ "sleep", "suspend" ]
+actions = { "sleep" = "systemctl suspend" }
+
+[[entries]]
+text = "Log Out"
+keywords = [ "logout" ]
+actions = { "logout" = "hyprctl dispatch exit" }
+
+[[entries]]
+text = "Reboot"
+keywords = [ "reboot", "restart" ]
+actions = { "reboot" = "reboot" }
+
+[[entries]]
+text = "Shut Down"
+keywords = [ "shutdown" ]
+actions = { "shutdown" = "shutdown now" }
