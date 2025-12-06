@@ -51,7 +51,6 @@ in
       brightnessctl
       btop
       cargo
-      chezmoi
       fastfetch
       fd
       fzf
