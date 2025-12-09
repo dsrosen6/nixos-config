@@ -1,0 +1,22 @@
+{
+    "laptop_display": {
+        "name": "eDP-1",
+        "width": 1920,
+        "height": 1200,
+        "refreshRate": 60.001,
+        "x": 3440,
+        "y": 0,
+        "scale": 1.25
+    },
+    "external_displays": {
+        "DP-1": {
+            "name": "DP-1",
+            "width": 3440,
+            "height": 1440,
+            "refreshRate": 174.96201,
+            "x": 0,
+            "y": 0,
+            "scale": 1
+        }
+    }
+}

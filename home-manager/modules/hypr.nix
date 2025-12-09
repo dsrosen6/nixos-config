@@ -1,9 +1,8 @@
-let
-  hlSrc = ../../dotfiles/hypr;
-in
+{ config, ... }:
 {
+
   xdg.configFile = {
-    "hypr".source = "${hlSrc}";
+    "hypr".source = config.lib.file.mkOutOfStoreSymlink "/home/danny/nixos/dotfiles/hypr";
   };
 
   services = {

@@ -29,13 +29,6 @@ in
         warp-on-scroll = false;
         format = "{name}";
         persistent-workspaces = {
-          "eDP-1" = [
-            1
-            2
-            3
-            4
-            5
-          ];
           "DP-1" = [
             1
             2
