@@ -1,6 +1,9 @@
 { inputs, pkgs, ... }:
 let
   dotfiles = ../dotfiles;
+  unstable = import inputs.nixpkgs-unstable {
+    system = pkgs.system;
+  };
 in
 {
   imports = [
@@ -56,7 +59,6 @@ in
       fzf
       gcc
       gh
-      go
       grimblast
       jetbrains.goland
       kitty
@@ -77,6 +79,10 @@ in
       statix
       swaylock
       vim
+
+      unstable.go
+      unstable.gopls
+      unstable.go-tools
     ];
   };
 
