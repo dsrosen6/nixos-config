@@ -1,9 +1,7 @@
 { inputs, pkgs, ... }:
 let
   dotfiles = ../dotfiles;
-  unstable = import inputs.nixpkgs-unstable {
-    system = pkgs.system;
-  };
+  unstable = import inputs.nixpkgs-unstable { inherit (pkgs) system; };
 in
 {
   imports = [
@@ -13,6 +11,7 @@ in
     ./modules/waybar.nix
     ./modules/zsh.nix
     ./modules/walker.nix
+    ./modules/yazi.nix
   ];
 
   gtk = {
@@ -133,7 +132,6 @@ in
     zoxide.enable = true;
     firefox.enable = true;
     swaylock.enable = true;
-    yazi.enable = true;
 
     git = {
       enable = true;
