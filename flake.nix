@@ -2,14 +2,13 @@
   description = "NixOS Config";
   inputs = {
     elephant.url = "github:abenz1267/elephant";
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
-    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
     walker = {
       url = "github:abenz1267/walker";
       inputs.elephant.follows = "elephant";
     };
     home-manager = {
-      url = "github:nix-community/home-manager/release-25.05";
+      url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -17,7 +16,6 @@
   outputs =
     {
       nixpkgs,
-      nixpkgs-unstable,
       home-manager,
       ...
     }@inputs:

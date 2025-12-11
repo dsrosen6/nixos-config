@@ -1,7 +1,6 @@
-{ inputs, pkgs, ... }:
+{ pkgs, ... }:
 let
   dotfiles = ../dotfiles;
-  unstable = import inputs.nixpkgs-unstable { inherit (pkgs) system; };
 in
 {
   imports = [
@@ -58,6 +57,9 @@ in
       fzf
       gcc
       gh
+      go
+      go-tools
+      gopls
       grimblast
       jetbrains.goland
       kitty
@@ -78,10 +80,6 @@ in
       statix
       swaylock
       vim
-
-      unstable.go
-      unstable.gopls
-      unstable.go-tools
     ];
   };
 
@@ -135,7 +133,7 @@ in
 
     git = {
       enable = true;
-      extraConfig = {
+      settings = {
         user.name = "Danny Rosenthal";
         user.email = "dsrosen6@gmail.com";
       };
