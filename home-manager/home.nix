@@ -4,13 +4,14 @@ let
 in
 {
   imports = [
+    ./modules/1password.nix
     ./modules/ghostty.nix
     ./modules/hypr.nix
     ./modules/tmux.nix
-    ./modules/waybar.nix
-    ./modules/zsh.nix
     ./modules/walker.nix
+    ./modules/waybar.nix
     ./modules/yazi.nix
+    ./modules/zsh.nix
   ];
 
   gtk = {
@@ -90,39 +91,6 @@ in
     easyeffects = {
       enable = true;
       preset = "thinkpad";
-    };
-    kanshi = {
-      enable = false;
-      systemdTarget = "xdg-desktop-portal-hyprland.service";
-      settings = [
-        {
-          profile = {
-            name = "docked";
-            outputs = [
-              {
-                criteria = "eDP-1";
-                status = "disable";
-              }
-              {
-                criteria = "DP-1";
-                position = "0,0";
-              }
-            ];
-          };
-        }
-        {
-          profile = {
-            name = "undocked";
-            outputs = [
-              {
-                criteria = "eDP-1";
-                status = "enable";
-                position = "0,0";
-              }
-            ];
-          };
-        }
-      ];
     };
   };
 
