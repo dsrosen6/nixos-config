@@ -13,6 +13,8 @@
     networkmanager.enable = true;
   };
 
+  powerManagement.cpuFreqGovernor = "performance";
+
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
