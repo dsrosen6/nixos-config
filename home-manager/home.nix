@@ -6,7 +6,9 @@ in
   imports = [
     ./modules/1password.nix
     ./modules/ghostty.nix
+    ./modules/go.nix
     ./modules/hypr.nix
+    ./modules/theme.nix
     ./modules/tmux.nix
     ./modules/walker.nix
     ./modules/waybar.nix
@@ -14,39 +16,13 @@ in
     ./modules/zsh.nix
   ];
 
-  gtk = {
-    enable = true;
-    theme = {
-      package = pkgs.magnetic-catppuccin-gtk.override {
-        tweaks = [ "macchiato" ];
-      };
-      name = "Catppuccin-GTK-Dark-Macchiato";
-    };
-
-    iconTheme = {
-      package = pkgs.adwaita-icon-theme;
-      name = "Adwaita";
-    };
-  };
-
   home = {
     username = "danny";
     homeDirectory = "/home/danny";
     stateVersion = "25.05";
 
     sessionVariables = {
-      EDITOR = "nvim";
-      GOPATH = "$HOME/go";
-      GOPROXY = "https://proxy.golang.org,direct";
       PATH = "$HOME/bin:$GOPATH/bin:$PATH";
-    };
-
-    pointerCursor = {
-      gtk.enable = true;
-      package = pkgs.bibata-cursors;
-      name = "Bibata-Modern-Classic";
-      size = 24;
-
     };
 
     packages = with pkgs; [
@@ -58,11 +34,7 @@ in
       fzf
       gcc
       gh
-      go
-      go-tools
-      gopls
       grimblast
-      jetbrains.goland
       kitty
       lazygit
       lua
@@ -77,7 +49,6 @@ in
       python314
       ripgrep
       spotify
-      sqlc
       statix
       swaylock
       vim
