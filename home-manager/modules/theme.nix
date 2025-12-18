@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
   gtk = {
+    enable = true;
     theme = {
       package = pkgs.magnetic-catppuccin-gtk.override {
         tweaks = [ "macchiato" ];
