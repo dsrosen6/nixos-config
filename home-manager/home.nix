@@ -29,6 +29,7 @@ in
       brightnessctl
       btop
       cargo
+      claude-code
       fastfetch
       fd
       fzf
@@ -41,6 +42,7 @@ in
       luarocks
       neovim
       nerd-fonts.jetbrains-mono
+      niv
       nixfmt-rfc-style
       nodejs
       obsidian
