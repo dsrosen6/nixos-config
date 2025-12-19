@@ -10,6 +10,11 @@
       bind-key -r k select-pane -U
       bind-key -r l select-pane -R
 
+      bind-key -n M-h select-pane -L
+      bind-key -n M-j select-pane -D
+      bind-key -n M-k select-pane -U
+      bind-key -n M-l select-pane -R
+
       bind -r H resize-pane -L 5
       bind -r J resize-pane -D 5
       bind -r K resize-pane -U 5
