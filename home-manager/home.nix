@@ -23,6 +23,7 @@ in
 
     sessionVariables = {
       PATH = "$HOME/bin:$GOPATH/bin:$PATH";
+      EDITOR = "nvim";
     };
 
     packages = with pkgs; [
