@@ -1,4 +1,9 @@
-{ pkgs, ... }:
+{
+  inputs,
+  pkgs,
+  pkgs-unstable,
+  ...
+}:
 let
   dotfiles = ../dotfiles;
 in
@@ -14,6 +19,7 @@ in
     ./modules/waybar.nix
     ./modules/yazi.nix
     ./modules/zsh.nix
+    inputs.hyprlaptop.homeManagerModules.default
   ];
 
   home = {
@@ -30,7 +36,7 @@ in
       brightnessctl
       btop
       cargo
-      claude-code
+      pkgs-unstable.claude-code
       fastfetch
       fd
       fzf
@@ -59,6 +65,7 @@ in
   };
 
   services = {
+    hyprlaptop.enable = true;
     cliphist.enable = true;
     swaync.enable = true;
     swayosd.enable = true;
