@@ -13,6 +13,7 @@ in
     ./modules/ghostty.nix
     ./modules/go.nix
     ./modules/hypr.nix
+    ./modules/swappy.nix
     ./modules/theme.nix
     ./modules/tmux.nix
     ./modules/walker.nix
@@ -42,7 +43,7 @@ in
       fzf
       gcc
       gh
-      grimblast
+      grim
       kitty
       lazygit
       lua
@@ -57,6 +58,7 @@ in
       playerctl
       python314
       ripgrep
+      slurp
       spotify
       statix
       swaylock

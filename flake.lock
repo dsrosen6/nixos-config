@@ -90,11 +90,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1766598748,
-        "narHash": "sha256-Tbrrj1ZkMH7zR4YwiNxNyz/+xB58Ibi825L7f+S/F8U=",
+        "lastModified": 1766599805,
+        "narHash": "sha256-aIUGheXD1lzv05cTc1WyCbmUu7i3sv87bNOzgqro5I8=",
         "owner": "dsrosen6",
         "repo": "hyprlaptop",
-        "rev": "6aa25535585c1e899ea5089f633cfde3151e316c",
+        "rev": "e57fd33f814e0d36327a4d4ff126d491a0653aca",
         "type": "github"
       },
       "original": {
@@ -121,11 +121,11 @@
     },
     "nixpkgs-unstable": {
       "locked": {
-        "lastModified": 1766309749,
-        "narHash": "sha256-3xY8CZ4rSnQ0NqGhMKAy5vgC+2IVK0NoVEzDoOh4DA4=",
+        "lastModified": 1766651565,
+        "narHash": "sha256-QEhk0eXgyIqTpJ/ehZKg9IKS7EtlWxF3N7DXy42zPfU=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "a6531044f6d0bef691ea18d4d4ce44d0daa6e816",
+        "rev": "3e2499d5539c16d0d173ba53552a4ff8547f4539",
         "type": "github"
       },
       "original": {
