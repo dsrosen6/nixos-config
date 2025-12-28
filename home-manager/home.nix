@@ -43,6 +43,7 @@ in
       fzf
       gcc
       gh
+      gnumake
       grim
       kitty
       lazygit
