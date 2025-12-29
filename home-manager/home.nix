@@ -46,6 +46,7 @@ in
       gnumake
       grim
       inputs.hyprdynamicmonitors.packages.${system}.default
+      jq
       kitty
       lazygit
       lua
