@@ -1,7 +1,7 @@
 {
   description = "NixOS Config";
   inputs = {
-    hyprlaptop.url = "github:dsrosen6/hyprlaptop";
+    hyprdynamicmonitors.url = "github:fiffeek/hyprdynamicmonitors";
     elephant.url = "github:abenz1267/elephant";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -17,10 +17,10 @@
 
   outputs =
     {
+      hyprdynamicmonitors,
       nixpkgs,
       nixpkgs-unstable,
       home-manager,
-      hyprlaptop,
       ...
     }@inputs:
     let
@@ -41,8 +41,11 @@
 
             {
               home-manager.extraSpecialArgs = {
-                inherit inputs pkgs-unstable;
+                inherit inputs pkgs-unstable system;
               };
+              home-manager.sharedModules = [
+                hyprdynamicmonitors.homeManagerModules.default
+              ];
             }
           ];
         };

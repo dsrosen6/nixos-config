@@ -2,6 +2,7 @@
   inputs,
   pkgs,
   pkgs-unstable,
+  system,
   ...
 }:
 let
@@ -20,7 +21,6 @@ in
     ./modules/waybar.nix
     ./modules/yazi.nix
     ./modules/zsh.nix
-    inputs.hyprlaptop.homeManagerModules.default
   ];
 
   home = {
@@ -45,6 +45,7 @@ in
       gh
       gnumake
       grim
+      inputs.hyprdynamicmonitors.packages.${system}.default
       kitty
       lazygit
       lua
@@ -68,7 +69,6 @@ in
   };
 
   services = {
-    hyprlaptop.enable = true;
     cliphist.enable = true;
     swaync.enable = true;
     swayosd.enable = true;
@@ -98,4 +98,5 @@ in
     "swaylock/config".source = "${dotfiles}/swaylock/config";
     "swaync".source = "${dotfiles}/swaync";
   };
+
 }
