@@ -1,4 +1,4 @@
-{ pkgs, pkgs-unstable, ... }:
+{ pkgs, ... }:
 {
   imports = [
     ./keyd.nix
@@ -96,7 +96,6 @@
   };
 
   programs.hyprland = {
-    package = pkgs-unstable.hyprland;
     enable = true;
     withUWSM = true;
     xwayland.enable = true;
