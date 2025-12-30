@@ -82,11 +82,6 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  environment.variables = {
-    XCURSOR_THEME = "Bibata-Modern-Classic";
-    XCURSOR_SIZE = "24";
-  };
-
   programs = {
     # 1Password is in here because the Home Manager version won't link with browser extensions.
     _1password-gui.enable = true;

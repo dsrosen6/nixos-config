@@ -37,7 +37,6 @@ in
       brightnessctl
       btop
       cargo
-      pkgs-unstable.claude-code
       fastfetch
       fd
       fzf
@@ -45,7 +44,6 @@ in
       gh
       gnumake
       grim
-      inputs.hyprdynamicmonitors.packages.${system}.default
       jq
       kitty
       lazygit
@@ -55,7 +53,6 @@ in
       nerd-fonts.jetbrains-mono
       niv
       nixfmt-rfc-style
-      nodejs
       obsidian
       pavucontrol
       playerctl
@@ -66,6 +63,9 @@ in
       statix
       swaylock
       vim
+
+      pkgs-unstable.claude-code
+      inputs.hyprdynamicmonitors.packages.${system}.default
     ];
   };
 
@@ -99,5 +99,4 @@ in
     "swaylock/config".source = "${dotfiles}/swaylock/config";
     "swaync".source = "${dotfiles}/swaync";
   };
-
 }

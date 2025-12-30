@@ -1,9 +1,6 @@
-let
-  stylePath = ../../dotfiles/waybar/style.css;
-in
 {
   xdg.configFile = {
-    "waybar/style.css".source = "${stylePath}";
+    "waybar/style.css".source = ../../dotfiles/waybar/style.css;
   };
 
   programs.waybar = {
