@@ -2,7 +2,6 @@
   inputs,
   pkgs,
   pkgs-unstable,
-  system,
   ...
 }:
 let
@@ -21,6 +20,7 @@ in
     ./modules/waybar.nix
     ./modules/yazi.nix
     ./modules/zsh.nix
+    inputs.hyprlaptop.homeManagerModules.default
   ];
 
   home = {
@@ -44,6 +44,7 @@ in
       gh
       gnumake
       grim
+      hyprpicker
       jq
       kitty
       lazygit
@@ -65,12 +66,12 @@ in
       vim
 
       pkgs-unstable.claude-code
-      inputs.hyprdynamicmonitors.packages.${system}.default
     ];
   };
 
   services = {
     cliphist.enable = true;
+    hyprlaptop.enable = true;
     swaync.enable = true;
     swayosd.enable = true;
     easyeffects = {

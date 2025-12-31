@@ -10,8 +10,9 @@
 @define-color surface2    #5b6078;
 @define-color surface1    #494d64;
 @define-color surface0    #363a4f;
+@define-color base #24273a;
 
-@define-color bar-color rgba(30, 32, 48, 0.8);
+@define-color bar-color @base;
 @define-color primary-text @subtext1;
 @define-color emphasis-text @text;
 @define-color accent-text @sapphire;
