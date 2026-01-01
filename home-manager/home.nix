@@ -97,6 +97,7 @@ in
   xdg.configFile = {
     "easyeffects/output/thinkpad.json".source = "${dotfiles}/easyeffects/thinkpad.json";
     "swaync".source = "${dotfiles}/swaync";
+    "scripts".source = "${dotfiles}/scripts";
   };
 
   home.file.".config/background".source = wallpaper;
