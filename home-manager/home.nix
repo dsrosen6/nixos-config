@@ -6,6 +6,7 @@
 }:
 let
   dotfiles = ../dotfiles;
+  wallpaper = ../dotfiles/wallpapers/windwaker-island.jpg;
 in
 {
   imports = [
@@ -62,7 +63,6 @@ in
       slurp
       spotify
       statix
-      swaylock
       vim
 
       pkgs-unstable.claude-code
@@ -83,7 +83,6 @@ in
   programs = {
     zoxide.enable = true;
     firefox.enable = true;
-    swaylock.enable = true;
 
     git = {
       enable = true;
@@ -97,7 +96,8 @@ in
 
   xdg.configFile = {
     "easyeffects/output/thinkpad.json".source = "${dotfiles}/easyeffects/thinkpad.json";
-    "swaylock/config".source = "${dotfiles}/swaylock/config";
     "swaync".source = "${dotfiles}/swaync";
   };
+
+  home.file.".config/background".source = wallpaper;
 }

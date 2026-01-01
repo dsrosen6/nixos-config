@@ -3,8 +3,10 @@
     enable = true;
     settings = {
       manager = {
-        sort_by = "mtime";
-        sort_reverse = true;
+        show_hidden = true;
+        sort_by = "alphabetical";
+        sort_dir_first = true;
+        sort_reverse = false;
       };
     };
   };
