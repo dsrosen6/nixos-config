@@ -55,6 +55,7 @@ in
       nerd-fonts.jetbrains-mono
       niv
       nixfmt-rfc-style
+      nodejs
       obsidian
       pavucontrol
       playerctl
