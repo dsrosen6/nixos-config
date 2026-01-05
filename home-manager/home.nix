@@ -72,7 +72,6 @@ in
 
   services = {
     cliphist.enable = true;
-    hyprlaptop.enable = true;
     swaync.enable = true;
     swayosd.enable = true;
     easyeffects = {
