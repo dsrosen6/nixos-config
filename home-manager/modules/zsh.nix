@@ -17,7 +17,8 @@
 
     shellAliases = {
       gitig = "touch .gitignore && echo -e '*.env\n*.DS_Store\n.idea' >> .gitignore";
-      nb = "sudo nixos-rebuild switch --flake ~/nixos#thinkpad";
+      build-tp = "sudo nixos-rebuild switch --flake ~/nixos#thinkpad";
+      build-dt = "sudo nixos-rebuild switch --flake ~/nixos#desktop";
       nixconf = "cd ~/nixos && nvim";
       nvconf = "cd ~/.config/nvim && nvim";
     };

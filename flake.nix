@@ -46,6 +46,21 @@
             }
           ];
         };
+
+        desktop = nixpkgs.lib.nixosSystem {
+          inherit system;
+          specialArgs = { inherit pkgs-unstable; };
+          modules = [
+            ./hosts/desktop/config.nix
+            home-manager.nixosModules.home-manager
+
+            {
+              home-manager.extraSpecialArgs = {
+                inherit inputs pkgs-unstable system;
+              };
+            }
+          ];
+        };
       };
     };
 }
