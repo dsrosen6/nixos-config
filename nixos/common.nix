@@ -75,6 +75,7 @@
     description = "Danny Rosenthal";
     shell = pkgs.zsh;
     extraGroups = [
+      "docker"
       "networkmanager"
       "wheel"
     ];
@@ -96,7 +97,14 @@
     xwayland.enable = true;
   };
 
-  services.flatpak.enable = true;
+  virtualisation.docker = {
+    enable = true;
+    rootless = {
+      enable = true;
+      setSocketVariable = true;
+    };
+  };
 
+  services.flatpak.enable = true;
   system.stateVersion = "25.05";
 }

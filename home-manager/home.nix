@@ -65,7 +65,7 @@ in
       spotify
       statix
       vim
-
+      pkgs-unstable.zoom-us
       pkgs-unstable.claude-code
     ];
   };
