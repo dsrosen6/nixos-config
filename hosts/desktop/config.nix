@@ -19,6 +19,7 @@
     };
 
     desktopManager.plasma6.enable = true;
+    lact.enable = true;
   };
 
   programs.steam.enable = true;
