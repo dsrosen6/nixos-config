@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   imports = [
     ./hardware-configuration.nix
@@ -12,7 +12,21 @@
     enable32Bit = true;
   };
 
+  services = {
+    displayManager.sddm = {
+      enable = true;
+      wayland.enable = true;
+    };
+
+    desktopManager.plasma6.enable = true;
+  };
+
   programs.steam.enable = true;
+  environment.systemPackages = with pkgs; [
+    protontricks
+    p7zip
+    zenity
+  ];
 
   home-manager = {
     useGlobalPkgs = true;

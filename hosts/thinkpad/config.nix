@@ -7,6 +7,11 @@
     ../../nixos/keyd.nix
   ];
 
+  services = {
+    desktopManager.gnome.enable = true;
+    displayManager.gdm.enable = true;
+  };
+
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;

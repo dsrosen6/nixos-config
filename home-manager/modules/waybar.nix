@@ -5,7 +5,10 @@
 
   programs.waybar = {
     enable = true;
-    systemd.enable = true;
+    systemd = {
+      enable = true;
+      target = "wayland-session@Hyprland.target";
+    };
     settings.main = {
       layer = "top";
       position = "top";
