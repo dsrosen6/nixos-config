@@ -1,7 +1,4 @@
-{ inputs, ... }:
-let
-  dotfiles = ../../dotfiles;
-in
+{ inputs, dotfiles, ... }:
 {
   imports = [
     inputs.walker.homeManagerModules.default

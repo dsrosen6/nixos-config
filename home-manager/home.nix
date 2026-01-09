@@ -2,23 +2,20 @@
   inputs,
   pkgs,
   pkgs-unstable,
+  dotfiles,
   ...
 }:
 let
-  dotfiles = ../dotfiles;
-  wallpaper = ../dotfiles/wallpapers/windwaker-island.jpg;
+  wallpaper = "${dotfiles}/wallpapers/windwaker-island.jpg";
 in
 {
   imports = [
+    ./modules/hyprland/hypr.nix
     ./modules/1password.nix
     ./modules/ghostty.nix
     ./modules/go.nix
-    ./modules/hypr.nix
-    ./modules/swappy.nix
     ./modules/theme.nix
     ./modules/tmux.nix
-    ./modules/walker.nix
-    ./modules/waybar.nix
     ./modules/yazi.nix
     ./modules/zsh.nix
     inputs.hyprlaptop.homeManagerModules.default
@@ -44,7 +41,6 @@ in
       gcc
       gh
       gnumake
-      grim
       hyprpicker
       jq
       kitty
@@ -61,7 +57,6 @@ in
       playerctl
       python314
       ripgrep
-      slurp
       spotify
       statix
       vim
@@ -91,12 +86,10 @@ in
         user.email = "dsrosen6@gmail.com";
       };
     };
-
   };
 
   xdg.configFile = {
     "easyeffects/output/thinkpad.json".source = "${dotfiles}/easyeffects/thinkpad.json";
-    "swaync".source = "${dotfiles}/swaync";
     "scripts".source = "${dotfiles}/scripts";
   };
 

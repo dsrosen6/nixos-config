@@ -1,12 +1,14 @@
+{ dotfiles, ... }:
 {
   xdg.configFile = {
-    "waybar/style.css".source = ../../dotfiles/waybar/style.css;
+    "waybar/style.css".source = "${dotfiles}/waybar/style.css";
   };
 
   programs.waybar = {
     enable = true;
     systemd = {
       enable = true;
+      # prevent waybar from starting with KDE
       target = "wayland-session@Hyprland.target";
     };
     settings.main = {

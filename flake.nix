@@ -42,6 +42,7 @@
             {
               home-manager.extraSpecialArgs = {
                 inherit inputs pkgs-unstable system;
+                dotfiles = ./dotfiles;
               };
             }
           ];
@@ -57,6 +58,7 @@
             {
               home-manager.extraSpecialArgs = {
                 inherit inputs pkgs-unstable system;
+                dotfiles = ./dotfiles;
               };
             }
           ];
