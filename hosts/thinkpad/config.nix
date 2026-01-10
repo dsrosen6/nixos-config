@@ -5,12 +5,8 @@
     ../../nixos/common.nix
     ../../nixos/pkgs.nix
     ../../nixos/keyd.nix
+    ../../nixos/plasma.nix
   ];
-
-  services = {
-    desktopManager.gnome.enable = true;
-    displayManager.gdm.enable = true;
-  };
 
   home-manager = {
     useGlobalPkgs = true;
