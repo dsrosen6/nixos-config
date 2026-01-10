@@ -23,6 +23,7 @@
       modules-right = [
         "battery"
         "network"
+        "custom/swaync"
       ];
       "hyprland/workspaces" = {
         disable-scroll = true;
@@ -104,10 +105,9 @@
         tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
         format-alt = "{:%d|%I:%M}";
       };
-      "custom/nix" = {
-        format = "󱄅";
-        tooltip = true;
-        tooltip-format = "btw";
+      "custom/swaync" = {
+        format = "";
+        on-click = "swaync-client -t";
       };
     };
   };

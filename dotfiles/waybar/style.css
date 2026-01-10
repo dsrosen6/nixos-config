@@ -43,15 +43,6 @@ window#waybar {
     margin: 4px 8px;
 }
 
-#custom-nix {
-    margin-right: 8px;
-    color: @primary-text;
-}
-
-#custom-nix:hover {
-    color: @accent-text;
-}
-
 #workspaces {
     margin-left: 0px;
     margin-right: 0px;
@@ -85,8 +76,9 @@ window#waybar {
 #clock,
 #pulseaudio,
 #network,
+#custom-swaync,
 #battery {
-    padding: 2px 10px;
+    padding: 2px 12px;
     color: @primary-text;
 }
 
