@@ -1,5 +1,4 @@
 {
-  inputs,
   pkgs,
   pkgs-unstable,
   dotfiles,
@@ -18,7 +17,6 @@ in
     ./modules/tmux.nix
     ./modules/yazi.nix
     ./modules/zsh.nix
-    inputs.hyprlaptop.homeManagerModules.default
   ];
 
   home = {

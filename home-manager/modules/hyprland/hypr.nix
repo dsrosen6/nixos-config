@@ -1,7 +1,14 @@
-{ pkgs, config, dotfiles, ... }:
+{
+  pkgs,
+  config,
+  dotfiles,
+  inputs,
+  ...
+}:
 {
 
   imports = [
+    inputs.hyprdocked.homeManagerModules.default
     ./swappy.nix
     ./walker.nix
     ./waybar.nix
@@ -20,8 +27,9 @@
 
   programs.hyprlock.enable = true;
   services = {
-    hyprpaper.enable = true;
+    hyprdocked.enable = true;
     hypridle.enable = true;
+    hyprpaper.enable = true;
     hyprpolkitagent.enable = true;
     hyprsunset.enable = true;
   };

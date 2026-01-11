@@ -1,7 +1,7 @@
 {
   description = "NixOS Config";
   inputs = {
-    hyprlaptop.url = "github:dsrosen6/hyprlaptop";
+    hyprdocked.url = "github:dsrosen6/hyprdocked";
     elephant.url = "github:abenz1267/elephant";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -20,7 +20,7 @@
       nixpkgs,
       nixpkgs-unstable,
       home-manager,
-      hyprlaptop,
+      hyprdocked,
       ...
     }@inputs:
     let

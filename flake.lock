@@ -40,20 +40,20 @@
     "gomod2nix": {
       "inputs": {
         "flake-utils": [
-          "hyprlaptop",
+          "hyprdocked",
           "flake-utils"
         ],
         "nixpkgs": [
-          "hyprlaptop",
+          "hyprdocked",
           "nixpkgs"
         ]
       },
       "locked": {
-        "lastModified": 1763982521,
-        "narHash": "sha256-ur4QIAHwgFc0vXiaxn5No/FuZicxBr2p0gmT54xZkUQ=",
+        "lastModified": 1767019875,
+        "narHash": "sha256-NodN+lhWTD59b44Q2bPjE1edINfjfRkQYdZsrxifCeU=",
         "owner": "nix-community",
         "repo": "gomod2nix",
-        "rev": "02e63a239d6eabd595db56852535992c898eba72",
+        "rev": "49662a44272806ff785df2990a420edaaca15db4",
         "type": "github"
       },
       "original": {
@@ -83,23 +83,23 @@
         "type": "github"
       }
     },
-    "hyprlaptop": {
+    "hyprdocked": {
       "inputs": {
         "flake-utils": "flake-utils",
         "gomod2nix": "gomod2nix",
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1767584664,
-        "narHash": "sha256-UFT3q5p+565P1MbWRo7GyWS4/O0z0Jq3zCMSpL0qVbo=",
+        "lastModified": 1768161473,
+        "narHash": "sha256-ejVt2qoBtYHVM2hc/enl4RwYGUHePiLsiw8R0JUtvK8=",
         "owner": "dsrosen6",
-        "repo": "hyprlaptop",
-        "rev": "6ffa9f18441de387a0446c0e0c693aa15439f1b1",
+        "repo": "hyprdocked",
+        "rev": "2cc9aa5774648787c1d72ff560af4e741bf594fb",
         "type": "github"
       },
       "original": {
         "owner": "dsrosen6",
-        "repo": "hyprlaptop",
+        "repo": "hyprdocked",
         "type": "github"
       }
     },
@@ -137,11 +137,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1766309749,
-        "narHash": "sha256-3xY8CZ4rSnQ0NqGhMKAy5vgC+2IVK0NoVEzDoOh4DA4=",
+        "lastModified": 1767892417,
+        "narHash": "sha256-dhhvQY67aboBk8b0/u0XB6vwHdgbROZT3fJAjyNh5Ww=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "a6531044f6d0bef691ea18d4d4ce44d0daa6e816",
+        "rev": "3497aa5c9457a9d88d71fa93a4a8368816fbeeba",
         "type": "github"
       },
       "original": {
@@ -187,7 +187,7 @@
       "inputs": {
         "elephant": "elephant",
         "home-manager": "home-manager",
-        "hyprlaptop": "hyprlaptop",
+        "hyprdocked": "hyprdocked",
         "nixpkgs": "nixpkgs_3",
         "nixpkgs-unstable": "nixpkgs-unstable",
         "walker": "walker"
