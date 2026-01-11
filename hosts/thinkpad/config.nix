@@ -5,7 +5,7 @@
     ../../nixos/common.nix
     ../../nixos/pkgs.nix
     ../../nixos/keyd.nix
-    ../../nixos/plasma.nix
+    ../../nixos/gnome.nix
   ];
 
   home-manager = {

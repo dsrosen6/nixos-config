@@ -1,5 +1,18 @@
 { pkgs, ... }:
+let
+  catppuccin-kvantum = pkgs.catppuccin-kvantum.override {
+    accent = "teal";
+    variant = "macchiato";
+  };
+in
 {
+  home.packages = with pkgs; [
+    libsForQt5.qt5ct
+    kdePackages.qt6ct
+    catppuccin-kvantum
+    kdePackages.qtstyleplugin-kvantum
+  ];
+
   gtk = {
     enable = true;
     theme = {
@@ -13,6 +26,11 @@
       package = pkgs.adwaita-icon-theme;
       name = "Adwaita";
     };
+  };
+
+  qt = {
+    enable = true;
+    platformTheme.name = "qtct";
   };
 
   home.pointerCursor = {
