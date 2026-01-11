@@ -32,7 +32,7 @@
         warp-on-scroll = false;
         format = "{name}";
         persistent-workspaces = {
-          "DP-1" = [
+          "*" = [
             1
             2
             3
