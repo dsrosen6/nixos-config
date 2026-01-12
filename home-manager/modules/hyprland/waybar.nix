@@ -32,13 +32,7 @@
         warp-on-scroll = false;
         format = "{name}";
         persistent-workspaces = {
-          "*" = [
-            1
-            2
-            3
-            4
-            5
-          ];
+          "*" = 4;
         };
       };
       network = {
