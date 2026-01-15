@@ -31,9 +31,6 @@
         all-outputs = true;
         warp-on-scroll = false;
         format = "{name}";
-        persistent-workspaces = {
-          "*" = 4;
-        };
       };
       network = {
         format-wifi = "󰖩";
