@@ -6,6 +6,7 @@
     ../../nixos/pkgs.nix
     ../../nixos/keyd.nix
     ../../nixos/gnome.nix
+    ../../nixos/gaming.nix
   ];
 
   home-manager = {

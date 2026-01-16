@@ -77,8 +77,8 @@
         "on-click": "pavucontrol"
     },
     "clock": {
-        "format": "{:%I:%M}",
+        "format": "{:%d // %I:%M}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%d|%I:%M}"
+        "format-alt": "{:%I:%M}"
     }
 }

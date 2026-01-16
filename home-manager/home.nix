@@ -4,9 +4,6 @@
   dotfiles,
   ...
 }:
-let
-  wallpaper = "${dotfiles}/wallpapers/windwaker-island.jpg";
-in
 {
   imports = [
     ./modules/hyprland/hypr.nix
@@ -90,6 +87,4 @@ in
     "easyeffects/output/thinkpad.json".source = "${dotfiles}/easyeffects/thinkpad.json";
     "scripts".source = "${dotfiles}/scripts";
   };
-
-  home.file.".config/background".source = wallpaper;
 }
