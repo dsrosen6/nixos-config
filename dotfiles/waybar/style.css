@@ -76,7 +76,6 @@ window#waybar {
 #clock,
 #pulseaudio,
 #network,
-#custom-swaync,
 #battery {
     padding: 2px 12px;
     color: @primary-text;
