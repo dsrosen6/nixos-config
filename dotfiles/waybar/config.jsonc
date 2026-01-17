@@ -8,6 +8,7 @@
         "clock"
     ],
     "modules-right": [
+        "pulseaudio",
         "battery",
         "network"
     ],
@@ -19,7 +20,7 @@
         "format": "{name}"
     },
     "network": {
-        "format-wifi": "󰖩",
+        "format-wifi": "󰖩 {essid}",
         "format-ethernet": "",
         "tooltip-format": "{ifname} via {gwaddr}",
         "format-disconnected": "󰖪"
@@ -29,8 +30,8 @@
             "warning": 20,
             "critical": 10
         },
-        "format": "{icon}",
-        "format-alt": "{icon} {capacity}%",
+        "format": "{icon} {capacity}%",
+        "format-alt": "{icon}",
         "format-icons": {
             "default": [
                 "󰂎",

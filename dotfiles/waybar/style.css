@@ -11,8 +11,10 @@
 @define-color surface1    #494d64;
 @define-color surface0    #363a4f;
 @define-color base #24273a;
+@define-color crust #181926;
 
-@define-color bar-color @base;
+@define-color bar-color @crust;
+@define-color pill-color @surface0;
 @define-color primary-text @subtext1;
 @define-color emphasis-text @text;
 @define-color accent-text @sapphire;
@@ -39,13 +41,15 @@ window#waybar {
 .modules-left,
 .modules-right,
 .modules-center {
-    padding: 0px 8px;
+    padding: 0px 0px;
     margin: 4px 8px;
 }
 
 #workspaces {
-    margin-left: 0px;
-    margin-right: 0px;
+    margin: 2px 4px;
+    padding: 1px 4px;
+    background: @pill-color;
+    border-radius: 5px;
 }
 
 #workspaces button {
@@ -77,7 +81,10 @@ window#waybar {
 #pulseaudio,
 #network,
 #battery {
-    padding: 2px 12px;
+    margin: 2px 4px;
+    padding: 1px 10px;
+    border-radius: 5px;
+    background: @pill-color;
     color: @primary-text;
 }
 

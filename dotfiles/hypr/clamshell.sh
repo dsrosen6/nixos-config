@@ -21,7 +21,9 @@ laptop_mtr_enabled() {
 }
 
 reload_waybar() {
-    systemctl --user restart waybar.service && echo "waybar reloaded"
+    if pgrep waybar; then
+        systemctl --user restart waybar.service && echo "waybar reloaded"
+    fi
 }
 
 enable_monitor() {
