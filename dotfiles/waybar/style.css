@@ -11,10 +11,11 @@
 @define-color surface1    #494d64;
 @define-color surface0    #363a4f;
 @define-color base #24273a;
+@define-color mantle #1e2030;
 @define-color crust #181926;
 
 @define-color bar-color @crust;
-@define-color pill-color @surface0;
+@define-color pill-color @base;
 @define-color primary-text @subtext1;
 @define-color emphasis-text @text;
 @define-color accent-text @sapphire;
@@ -28,7 +29,7 @@
 * {
     font-family:"JetBrainsMono Nerd Font";
     font-weight: 600;
-    font-size: 16px;
+    font-size: 15px;
     border-radius: 0px;
 }
 
@@ -42,12 +43,12 @@ window#waybar {
 .modules-right,
 .modules-center {
     padding: 0px 0px;
-    margin: 4px 8px;
+    margin: 3px 8px;
 }
 
 #workspaces {
     margin: 2px 4px;
-    padding: 1px 4px;
+    padding: 0px 4px;
     background: @pill-color;
     border-radius: 5px;
 }
@@ -55,7 +56,6 @@ window#waybar {
 #workspaces button {
     margin: 1px 0px;
     padding: 1px 1px;
-    border-bottom: 1px hidden;
 }
 
 #workspaces button {
@@ -74,7 +74,6 @@ window#waybar {
 
 #workspaces button.active {
     color: @active-ws;
-    border-bottom: 1px solid @sapphire;
 }
 
 #clock,
@@ -82,7 +81,7 @@ window#waybar {
 #network,
 #battery {
     margin: 2px 4px;
-    padding: 1px 10px;
+    padding: 0px 10px;
     border-radius: 5px;
     background: @pill-color;
     color: @primary-text;
