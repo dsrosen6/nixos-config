@@ -62,6 +62,7 @@
 
   services = {
     cliphist.enable = true;
+    kdeconnect.enable = true;
     swaync.enable = true;
     swayosd.enable = true;
     easyeffects = {
