@@ -3,6 +3,7 @@
     "position": "top",
     "modules-left": [
         "hyprland/workspaces",
+        "hyprland/submap",
         "mpris"
     ],
     "modules-center": [
@@ -19,6 +20,9 @@
         "all-outputs": true,
         "warp-on-scroll": false,
         "format": "{name}"
+    },
+    "hyprland/submap": {
+        "format": "SUBMAP: {}"
     },
     "mpris": {
         "player": "spotify",

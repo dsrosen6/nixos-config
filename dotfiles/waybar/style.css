@@ -76,6 +76,7 @@ window#waybar {
 }
 
 #mpris,
+#submap,
 #clock,
 #pulseaudio,
 #network,
@@ -85,6 +86,10 @@ window#waybar {
     border-radius: 5px;
     background: @pill-color;
     color: @primary-text;
+}
+
+#submap {
+    color: @yellow;
 }
 
 #battery.warning {
