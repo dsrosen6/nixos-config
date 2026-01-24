@@ -84,9 +84,10 @@ element-icon {
     text-color:       inherit;
 }
 window {
+    border-radius: 6;
     padding:          5;
     background-color: @background;
-    border:           1;
+    border:           2;
 }
 mainbox {
     padding: 0;
