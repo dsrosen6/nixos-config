@@ -8,6 +8,7 @@
   imports = [
     ./modules/hyprland/hypr.nix
     ./modules/1password.nix
+    ./modules/cliphist.nix
     ./modules/ghostty.nix
     ./modules/go.nix
     ./modules/theme.nix
@@ -61,7 +62,6 @@
   };
 
   services = {
-    cliphist.enable = true;
     kdeconnect.enable = true;
     swaync.enable = true;
     swayosd.enable = true;
