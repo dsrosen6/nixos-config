@@ -87,5 +87,6 @@
   xdg.configFile = {
     "easyeffects/output/thinkpad.json".source = "${dotfiles}/easyeffects/thinkpad.json";
     "scripts".source = "${dotfiles}/scripts";
+    "colors".source = "${dotfiles}/colors";
   };
 }

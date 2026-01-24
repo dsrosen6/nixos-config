@@ -1,18 +1,4 @@
-@define-color red         #ed8796;
-@define-color yellow      #eed49f;
-@define-color sapphire    #7dc4e4;
-@define-color text        #cad3f5;
-@define-color subtext1    #b8c0e0;
-@define-color subtext0    #a5adcb;
-@define-color overlay2    #939ab7;
-@define-color overlay1    #8087a2;
-@define-color overlay0    #6e738d;
-@define-color surface2    #5b6078;
-@define-color surface1    #494d64;
-@define-color surface0    #363a4f;
-@define-color base #24273a;
-@define-color mantle #1e2030;
-@define-color crust #181926;
+@import "../../.config/colors/macchiato-gtk.css";
 
 @define-color bar-color @crust;
 @define-color pill-color @base;
@@ -25,6 +11,9 @@
 @define-color used-ws @subtext1;
 @define-color empty-ws @overlay0;
 @define-color urgent-ws @yellow;
+@define-color groups-sm @green;
+@define-color resize-sm @red;
+@define-color media-sm @mauve;
 
 * {
     font-family:"JetBrainsMono Nerd Font";
@@ -88,8 +77,16 @@ window#waybar {
     color: @primary-text;
 }
 
-#submap {
-    color: @yellow;
+#submap.GROUPS {
+    color: @groups-sm;
+}
+
+#submap.RESIZE {
+    color: @resize-sm;
+}
+
+#submap.MEDIA {
+    color: @media-sm;
 }
 
 #battery.warning {
