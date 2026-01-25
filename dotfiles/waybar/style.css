@@ -13,6 +13,7 @@
 @define-color urgent-ws @yellow;
 @define-color groups-sm @green;
 @define-color resize-sm @red;
+@define-color move-sm @peach;
 @define-color media-sm @mauve;
 
 * {
@@ -77,8 +78,12 @@ window#waybar {
     color: @primary-text;
 }
 
-#submap.RESIZE {
+#submap.WINDOW_RESIZE {
     color: @resize-sm;
+}
+
+#submap.WINDOW_MOVE {
+    color: @move-sm;
 }
 
 #submap.MEDIA {

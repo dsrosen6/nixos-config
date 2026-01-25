@@ -19,11 +19,22 @@ if [[ -z "$NOGRP_INACTIVE_COLOR" ]]; then
 fi
 
 hyprctl dispatch submap "$SUBMAP"
-hyprctl keyword general:col.active_border "$ACTIVE_COLOR"
-hyprctl keyword general:col.inactive_border "$INACTIVE_COLOR"
-hyprctl keyword general:col.nogroup_border_active = "$NOGRP_ACTIVE_COLOR"
-hyprctl keyword general:col.nogroup_border = "$NOGRP_INACTIVE_COLOR"
-hyprctl keyword group:col.border_active "$ACTIVE_COLOR"
-hyprctl keyword group:col.border_inactive "$INACTIVE_COLOR"
-hyprctl keyword group:groupbar:col.active "$ACTIVE_COLOR"
-hyprctl keyword group:groupbar:col.inactive "$INACTIVE_COLOR"
+if [[ -n "$ACTIVE_COLOR" ]]; then
+    hyprctl keyword general:col.active_border "$ACTIVE_COLOR"
+    hyprctl keyword group:col.border_active "$ACTIVE_COLOR"
+    hyprctl keyword group:groupbar:col.active "$ACTIVE_COLOR"
+fi
+
+if [[ -n "$INACTIVE_COLOR" ]]; then
+    hyprctl keyword general:col.inactive_border "$INACTIVE_COLOR"
+    hyprctl keyword group:col.border_inactive "$INACTIVE_COLOR"
+    hyprctl keyword group:groupbar:col.inactive "$INACTIVE_COLOR"
+fi
+
+if [[ -n "$NOGRP_ACTIVE_COLOR" ]]; then
+    hyprctl keyword general:col.nogroup_border_active = "$NOGRP_ACTIVE_COLOR"
+fi
+
+if [[ -n "$NOGRP_INACTIVE_COLOR" ]]; then
+    hyprctl keyword general:col.nogroup_border = "$NOGRP_INACTIVE_COLOR"
+fi
