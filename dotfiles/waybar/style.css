@@ -2,7 +2,7 @@
 
 @define-color bar-color @crust;
 @define-color pill-color @base;
-@define-color primary-text @subtext1;
+@define-color primary-text @subtext0;
 @define-color emphasis-text @text;
 @define-color accent-text @sapphire;
 @define-color warning-text @yellow;
@@ -68,9 +68,11 @@ window#waybar {
 #mpris,
 #submap,
 #clock,
+#custom-drawericon,
 #pulseaudio,
 #network,
-#battery {
+#battery,
+.hardware-children > * {
     margin: 2px 4px;
     padding: 0px 10px;
     border-radius: 5px;
