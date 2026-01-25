@@ -1,6 +1,29 @@
 #!/usr/bin/env bash
 
-hyprctl dispatch submap $1
-hyprctl keyword general:col.active_border $2
-hyprctl keyword group:col.border_active $2
-hyprctl keyword group:groupbar:col.active $2
+SUBMAP="$1"
+ACTIVE_COLOR="$2"
+INACTIVE_COLOR="$3"
+NOGRP_ACTIVE_COLOR="$4"
+NOGRP_INACTIVE_COLOR="$5"
+
+if [[ -z "$INACTIVE_COLOR" ]]; then
+    INACTIVE_COLOR="$ACTIVE_COLOR"
+fi
+
+if [[ -z "$NOGRP_ACTIVE_COLOR" ]]; then
+    NOGRP_ACTIVE_COLOR = "$ACTIVE_COLOR"
+fi
+
+if [[ -z "$NOGRP_INACTIVE_COLOR" ]]; then
+    NOGRP_INACTIVE_COLOR = "$INACTIVE_COLOR"
+fi
+
+hyprctl dispatch submap "$SUBMAP"
+hyprctl keyword general:col.active_border "$ACTIVE_COLOR"
+hyprctl keyword general:col.inactive_border "$INACTIVE_COLOR"
+hyprctl keyword general:col.nogroup_border_active = "$NOGRP_ACTIVE_COLOR"
+hyprctl keyword general:col.nogroup_border = "$NOGRP_INACTIVE_COLOR"
+hyprctl keyword group:col.border_active "$ACTIVE_COLOR"
+hyprctl keyword group:col.border_inactive "$INACTIVE_COLOR"
+hyprctl keyword group:groupbar:col.active "$ACTIVE_COLOR"
+hyprctl keyword group:groupbar:col.inactive "$INACTIVE_COLOR"

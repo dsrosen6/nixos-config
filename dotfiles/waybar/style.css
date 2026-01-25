@@ -77,10 +77,6 @@ window#waybar {
     color: @primary-text;
 }
 
-#submap.GROUPS {
-    color: @groups-sm;
-}
-
 #submap.RESIZE {
     color: @resize-sm;
 }
