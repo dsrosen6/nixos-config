@@ -4,13 +4,13 @@ SCRIPTS_DIR="$HOME/.config/rofi/scripts"
 
 clipboard() {
     cliphist list |
-        rofi -dmenu -display-columns 2 |
+        rofi -dmenu -display-columns 2 -i |
         cliphist decode | wl-copy
 }
 
 powermenu() {
     choices=$(printf "Lock\nSleep\nLog Out\nReboot\nShut Down")
-    choice=$(echo "$choices" | rofi -dmenu)
+    choice=$(echo "$choices" | rofi -dmenu -i)
     case $choice in
     "Lock") loginctl lock-session ;;
     "Sleep") systemctl suspend ;;

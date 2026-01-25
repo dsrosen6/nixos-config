@@ -85,6 +85,7 @@ element-icon {
 }
 window {
     border-radius: 6;
+    width: 600px;
     padding:          5;
     background-color: @background;
     border:           2;
