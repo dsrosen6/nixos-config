@@ -1,4 +1,5 @@
 {
+  inputs,
   pkgs,
   pkgs-unstable,
   dotfiles,
@@ -56,6 +57,7 @@
       spotify
       statix
       vim
+      inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
       pkgs-unstable.zoom-us
       pkgs-unstable.claude-code
     ];
