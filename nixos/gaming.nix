@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   hardware.graphics = {
     enable = true;
@@ -7,4 +8,8 @@
   # GPU settings GUI
   services.lact.enable = true;
   programs.steam.enable = true;
+
+  environment.systemPackages = with pkgs; [
+    goverlay
+  ];
 }
