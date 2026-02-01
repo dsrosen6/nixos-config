@@ -17,9 +17,9 @@
 @define-color media-sm @mauve;
 
 * {
-    font-family:"JetBrainsMono Nerd Font";
+    font-family:"JetBrainsMono Nerd Font Propo";
     font-weight: 600;
-    font-size: 15px;
+    font-size: 16px;
     border-radius: 0px;
 }
 
@@ -68,11 +68,12 @@ window#waybar {
 #mpris,
 #submap,
 #clock,
-#custom-drawericon,
+#disk,
+#cpu,
+#memory,
 #pulseaudio,
 #network,
-#battery,
-.hardware-children > * {
+#battery {
     margin: 2px 4px;
     padding: 0px 10px;
     border-radius: 5px;

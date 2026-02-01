@@ -47,6 +47,7 @@
       luarocks
       neovim
       nerd-fonts.jetbrains-mono
+      nerd-fonts.ubuntu-sans
       niv
       nixfmt-rfc-style
       nodejs
