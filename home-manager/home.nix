@@ -32,6 +32,7 @@
       brightnessctl
       btop
       cargo
+      discord
       fastfetch
       fd
       fzf
