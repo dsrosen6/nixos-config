@@ -1,117 +1,14 @@
-{ pkgs, ... }:
 {
   imports = [
+    ./dev.nix
+    ./general.nix
+    ./gnome.nix
+    ./hardware.nix
     ./keyd.nix
+    ./network.nix
     ./pkgs.nix
+    ./programs.nix
+    ./services.nix
+    ./users.nix
   ];
-
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
-  networking = {
-    hostName = "nixos";
-    networkmanager.enable = true;
-    firewall = rec {
-      allowedTCPPortRanges = [
-        {
-          from = 1714;
-          to = 1764;
-        }
-      ];
-      allowedUDPPortRanges = allowedTCPPortRanges;
-    };
-  };
-
-  powerManagement.cpuFreqGovernor = "performance";
-
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
-
-  time.timeZone = "America/Chicago";
-  i18n.defaultLocale = "en_US.UTF-8";
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "en_US.UTF-8";
-    LC_IDENTIFICATION = "en_US.UTF-8";
-    LC_MEASUREMENT = "en_US.UTF-8";
-    LC_MONETARY = "en_US.UTF-8";
-    LC_NAME = "en_US.UTF-8";
-    LC_NUMERIC = "en_US.UTF-8";
-    LC_PAPER = "en_US.UTF-8";
-    LC_TELEPHONE = "en_US.UTF-8";
-    LC_TIME = "en_US.UTF-8";
-  };
-
-  hardware = {
-    bluetooth.enable = true;
-  };
-
-  services = {
-    blueman.enable = true;
-    xserver = {
-      enable = true;
-      xkb = {
-        layout = "us";
-        variant = "";
-      };
-    };
-
-    # This rule stops the Logi bolt receiver from immediately waking the device from suspend.
-    udev.extraRules = ''
-      ACTION=="add", SUBSYSTEM=="usb", DRIVERS=="usb", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="c548", ATTR{power/wakeup}="disabled"
-    '';
-
-    pipewire = {
-      enable = true;
-      alsa.enable = true;
-      alsa.support32Bit = true;
-      pulse.enable = true;
-    };
-
-    libinput.enable = true;
-    printing.enable = true;
-  };
-
-  security = {
-    rtkit.enable = true;
-  };
-
-  users.users.danny = {
-    isNormalUser = true;
-    description = "Danny Rosenthal";
-    shell = pkgs.zsh;
-    extraGroups = [
-      "docker"
-      "networkmanager"
-      "wheel"
-    ];
-  };
-
-  nixpkgs.config.allowUnfree = true;
-
-  programs = {
-    # 1Password is in here because the Home Manager version won't link with browser extensions.
-    _1password-gui.enable = true;
-    _1password.enable = true; # op CLI
-    zsh.enable = true;
-    nix-ld.enable = true;
-  };
-
-  programs.hyprland = {
-    enable = true;
-    withUWSM = true;
-    xwayland.enable = true;
-  };
-
-  virtualisation.docker = {
-    enable = true;
-    rootless = {
-      enable = true;
-      setSocketVariable = true;
-    };
-  };
-
-  services.flatpak.enable = true;
-  system.stateVersion = "25.05";
 }

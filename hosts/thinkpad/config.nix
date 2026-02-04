@@ -3,10 +3,6 @@
   imports = [
     ./hardware-configuration.nix
     ../../nixos/common.nix
-    ../../nixos/pkgs.nix
-    ../../nixos/keyd.nix
-    ../../nixos/gnome.nix
-    ../../nixos/gaming.nix
   ];
 
   home-manager = {

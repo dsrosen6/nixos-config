@@ -17,11 +17,12 @@
 
     shellAliases = {
       gitig = "touch .gitignore && echo -e '*.env\n*.DS_Store\n.idea' >> .gitignore";
-      blt = "sudo nixos-rebuild switch --flake ~/nixos#thinkpad";
-      bpc = "sudo nixos-rebuild switch --flake ~/nixos#desktop";
+      nb = "sudo nixos-rebuild switch --flake ~/nixos#thinkpad";
+      lg = "lazygit";
       nxcd = "cd ~/nixos";
-      nxnv = "cd ~/nixos && nvim";
+      n = "nvim";
       nvnv = "cd ~/.config/nvim && nvim";
+      nxnv = "cd ~/nixos && nvim";
     };
   };
 }
