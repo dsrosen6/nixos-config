@@ -84,11 +84,11 @@ element-icon {
     text-color:       inherit;
 }
 window {
-    border-radius: 6;
+    border-radius: 0;
     width: 600px;
     padding:          5;
     background-color: @background;
-    border:           2;
+    border:           1;
 }
 mainbox {
     padding: 0;

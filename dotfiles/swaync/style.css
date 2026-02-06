@@ -18,7 +18,7 @@
   font-size: 17px;
   color: @theme_fg;
   border: none;
-  border-radius: 6;
+  border-radius: 0;
   background: none;
   padding: 0;
   margin: 0;
@@ -29,7 +29,7 @@
 
 .control-center {
   background-color: @theme_bg;
-  border: 2px solid @main_border;
+  border: 1px solid @main_border;
   padding: 28px;
   min-width: 380px;
 }
