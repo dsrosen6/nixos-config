@@ -15,14 +15,15 @@
       bind-key -n M-k select-pane -U
       bind-key -n M-l select-pane -R
 
-      bind -r H resize-pane -L 5
-      bind -r J resize-pane -D 5
-      bind -r K resize-pane -U 5
-      bind -r L resize-pane -R 5
+      bind -r H resize-pane -L 7
+      bind -r J resize-pane -D 7
+      bind -r K resize-pane -U 7
+      bind -r L resize-pane -R 7
 
       set -sg escape-time 5
       set -g default-terminal xterm-256color
       set -g mouse on
+      set -g repeat-time 1000
     '';
   };
 }
