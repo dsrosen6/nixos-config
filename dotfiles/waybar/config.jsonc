@@ -1,20 +1,23 @@
 {
     "layer": "top",
     "position": "top",
+    "margin-left": 8,
+    "margin-right": 8,
+    "reload_style_on_change": true,
     "modules-left": [
         "hyprland/workspaces",
-        "mpris",
-        "hyprland/submap"
+        "hyprland/submap",
+        "mpris"
     ],
-    "modules-center": [],
+    "modules-center": [
+        "clock"
+    ],
     "modules-right": [
-        "disk",
         "cpu",
         "memory",
         "pulseaudio",
         "battery",
-        "network",
-        "clock"
+        "network"
     ],
     "hyprland/workspaces": {
         "disable-scroll": true,
@@ -24,7 +27,7 @@
         "format": "{name}"
     },
     "hyprland/submap": {
-        "format": "SUBMAP: {}"
+        "format": "[{}]"
     },
     "mpris": {
         "player": "spotify",
@@ -35,28 +38,6 @@
             "playing": "",
             "paused": ""
         }
-    },
-    "group/hardware": {
-        "orientation": "horizontal",
-        "drawer": {
-            "transition-duration": 350,
-            "transition-left-to-right": false,
-            "click-to-reveal": true,
-            "children-class": "hardware-children"
-        },
-        "modules": [
-            "custom/drawericon",
-            "cpu",
-            "memory"
-        ]
-    },
-    "custom/drawericon": {
-        "format": ""
-    },
-    "disk": {
-        "interval": 60,
-        "format": " {percentage_used}%",
-        "path": "/"
     },
     "cpu": {
         "interval": 10,
