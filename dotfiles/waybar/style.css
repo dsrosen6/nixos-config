@@ -1,7 +1,7 @@
 @import "../../.config/colors/macchiato-gtk.css";
 
-@define-color bar-color @crust;
-@define-color pill-color @base;
+@define-color bar-color transparent;
+@define-color pill-color @mantle;
 @define-color primary-text @subtext0;
 @define-color emphasis-text @text;
 @define-color accent-text @sapphire;
@@ -32,7 +32,7 @@ window#waybar {
 .modules-right,
 .modules-center {
     padding: 0px 0px;
-    margin: 3px 8px;
+    margin: 3px 4px;
 }
 
 #workspaces {
@@ -67,13 +67,13 @@ window#waybar {
 
 #mpris,
 #submap,
-#clock,
 #disk,
 #cpu,
 #memory,
 #pulseaudio,
 #network,
-#battery {
+#battery,
+#clock {
     margin: 2px 4px;
     padding: 0px 10px;
     border-radius: 5px;

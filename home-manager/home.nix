@@ -45,8 +45,6 @@
       lua
       luarocks
       neovim
-      nerd-fonts.jetbrains-mono
-      nerd-fonts.ubuntu-sans
       niv
       nixfmt-rfc-style
       nodejs
@@ -59,6 +57,10 @@
       statix
       vim
       pkgs-unstable.claude-code
+
+      nerd-fonts.jetbrains-mono
+      nerd-fonts.ubuntu-sans
+      ubuntu-sans
     ];
   };
 
