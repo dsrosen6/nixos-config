@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   programs.zsh = {
     enable = true;
@@ -14,6 +15,14 @@
         "history"
       ];
     };
+
+    plugins = [
+      {
+        name = "vi-mode";
+        src = pkgs.zsh-vi-mode;
+        file = "share/zsh-vi-mode/zsh-vi-mode.plugin.zsh";
+      }
+    ];
 
     shellAliases = {
       gitig = "touch .gitignore && echo -e '*.env\n*.DS_Store\n.idea' >> .gitignore";
