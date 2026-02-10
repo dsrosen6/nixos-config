@@ -37,6 +37,7 @@
       fzf
       gcc
       gh
+      gnome-disk-utility
       gnumake
       hyprpicker
       jq
@@ -44,6 +45,7 @@
       lazygit
       lua
       luarocks
+      nautilus
       neovim
       niv
       nixfmt-rfc-style

@@ -2,7 +2,6 @@
   imports = [
     ./dev.nix
     ./general.nix
-    ./gnome.nix
     ./hardware.nix
     ./keyd.nix
     ./network.nix

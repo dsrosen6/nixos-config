@@ -1,5 +1,8 @@
 {
   services = {
+    displayManager.gdm.enable = true;
+    gvfs.enable = true;
+    gnome.gnome-keyring.enable = true;
     blueman.enable = true;
     xserver = {
       enable = true;
