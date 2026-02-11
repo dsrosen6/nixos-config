@@ -57,6 +57,7 @@ window#waybar {
 #pulseaudio,
 #network,
 #battery,
+#custom-swaync,
 #clock {
     color: @primary-text;
     margin-left: 17px;

@@ -67,7 +67,6 @@
   };
 
   services = {
-    kdeconnect.enable = true;
     swaync.enable = true;
     swayosd.enable = true;
     easyeffects = {
