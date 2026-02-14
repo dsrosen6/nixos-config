@@ -31,6 +31,7 @@
       brightnessctl
       btop
       cargo
+      chromium
       discord
       fastfetch
       fd
