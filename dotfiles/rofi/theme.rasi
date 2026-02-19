@@ -1,12 +1,14 @@
 @import "macchiato"
 
 * {
+  primary-color:               @teal;
+  lightfg:                     @primary-color;
+  lightbg:                     @mantle;
+  scrollbar-color:             @teal;
   selected-active-foreground:  @background;
-  lightfg:                     @text;
   separatorcolor:              @foreground;
   urgent-foreground:           @red;
   alternate-urgent-background: @lightbg;
-  lightbg:                     @mantle;
   background-color:            transparent;
   border-color:                @foreground;
   normal-background:           @background;
@@ -27,8 +29,8 @@
   normal-foreground:           @foreground;
   alternate-urgent-foreground: @red;
   alternate-active-foreground: @blue;
-
 }
+
 element {
     padding: 1px ;
     cursor:  pointer;
@@ -88,6 +90,7 @@ window {
     width: 600px;
     padding:          5;
     background-color: @background;
+    border-color: @teal;
     border:           2;
 }
 mainbox {
@@ -108,6 +111,7 @@ listview {
     border-color: @separatorcolor;
     spacing:      2px ;
     fixed-height: 0;
+    border-color: @primary-color;
     border:       2px dash 0px 0px ;
 }
 scrollbar {
@@ -115,7 +119,7 @@ scrollbar {
     padding:      0;
     handle-width: 8px ;
     border:       0;
-    handle-color: @normal-foreground;
+    handle-color: @scrollbar-color;
 }
 sidebar {
     border-color: @separatorcolor;
@@ -158,15 +162,16 @@ entry {
     cursor:            text;
     spacing:           0;
     placeholder-color: Gray;
-    placeholder:       "Type to filter";
 }
 prompt {
+    enabled: false;
     spacing:    0;
     text-color: @normal-foreground;
 }
 textbox-prompt-colon {
+    enabled: false;
     margin:     0px 0.3000em 0.0000em 0.0000em ;
     expand:     false;
-    str:        ":";
+    str:        "";
     text-color: inherit;
 }
