@@ -1,5 +1,6 @@
 {
   services = {
+    desktopManager.gnome.enable = true;
     displayManager.gdm.enable = true;
     gvfs.enable = true;
     gnome.gnome-keyring.enable = true;
