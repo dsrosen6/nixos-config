@@ -3,6 +3,7 @@
 MONITOR_NAME="eDP-1"
 MONITOR_SETTINGS="1920x1200,3440x0,1.25"
 TOTAL_MONITORS=$(hyprctl monitors -j | jq length)
+SLEEP_CMD="systemctl suspend"
 
 only_1_mtr() {
     if [[ "$TOTAL_MONITORS" -eq 1 ]]; then

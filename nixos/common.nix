@@ -4,6 +4,7 @@
     ./general.nix
     ./hardware.nix
     ./keyd.nix
+    ./logind.nix
     ./network.nix
     ./pkgs.nix
     ./programs.nix
