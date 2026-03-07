@@ -1,5 +1,9 @@
 {
   services = {
+    # Disabled because GNOME enables this by default and it overrides CPU power settings
+    # and makes things big slow
+    power-profiles-daemon.enable = false;
+
     desktopManager.gnome.enable = true;
     displayManager.gdm.enable = true;
     gvfs.enable = true;
