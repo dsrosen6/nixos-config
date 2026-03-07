@@ -43,6 +43,7 @@
       jq
       kitty
       lazygit
+      libnotify
       lua
       luarocks
       neovim
