@@ -1,0 +1,7 @@
+debug: true
+laptop: eDP-1
+suspend-closed: true
+suspend-idle: true
+post-hooks:
+  - command: "pgrep waybar && systemctl --user restart waybar.service"
+    on-status-change: true
