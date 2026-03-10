@@ -6,4 +6,6 @@
       setSocketVariable = true;
     };
   };
+
+  services.postgresql.enable = true;
 }
