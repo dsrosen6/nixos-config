@@ -1,5 +1,6 @@
 debug: true
 laptop: eDP-1
+settle-window: 2
 suspend-closed: true
 suspend-idle: true
 post-hooks:
