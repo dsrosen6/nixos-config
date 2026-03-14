@@ -1,4 +1,4 @@
-@import "macchiato"
+@import "mocha"
 
 * {
   primary-color:               @teal;

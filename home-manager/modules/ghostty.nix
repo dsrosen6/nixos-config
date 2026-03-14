@@ -2,7 +2,7 @@
   programs.ghostty = {
     enable = true;
     settings = {
-      theme = "Catppuccin Macchiato";
+      theme = "Catppuccin Mocha";
       font-family = "JetBrainsMono Nerd Font";
       font-size = 14;
     };

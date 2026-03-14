@@ -2,7 +2,7 @@
 let
   catppuccin-kvantum = pkgs.catppuccin-kvantum.override {
     accent = "teal";
-    variant = "macchiato";
+    variant = "mocha";
   };
 in
 {
@@ -17,9 +17,8 @@ in
     enable = true;
     theme = {
       package = pkgs.magnetic-catppuccin-gtk.override {
-        tweaks = [ "macchiato" ];
       };
-      name = "Catppuccin-GTK-Dark-Macchiato";
+      name = "Catppuccin-GTK-Dark";
     };
 
     iconTheme = {

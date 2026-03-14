@@ -1,4 +1,4 @@
-@import "../../.config/colors/macchiato-gtk.css";
+@import "../../.config/colors/mocha-gtk.css";
 @define-color primary-text @overlay2;
 
 * {
