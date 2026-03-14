@@ -69,10 +69,7 @@
   services = {
     swaync.enable = true;
     swayosd.enable = true;
-    easyeffects = {
-      enable = true;
-      preset = "thinkpad";
-    };
+    easyeffects.enable = true;
   };
 
   programs = {
@@ -89,8 +86,8 @@
   };
 
   xdg.configFile = {
-    "easyeffects/output/thinkpad.json".source = "${dotfiles}/easyeffects/thinkpad.json";
     "scripts".source = "${dotfiles}/scripts";
     "colors".source = "${dotfiles}/colors";
+    "easyeffects/output".source = "${dotfiles}/easyeffects";
   };
 }
