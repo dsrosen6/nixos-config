@@ -1,6 +1,10 @@
 {
   description = "NixOS Config";
   inputs = {
+    catppuccin = {
+      url = "github:catppuccin/nix";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     home-manager = {
@@ -11,6 +15,7 @@
 
   outputs =
     {
+      catppuccin,
       nixpkgs,
       nixpkgs-unstable,
       home-manager,
@@ -37,6 +42,9 @@
                 inherit inputs pkgs-unstable system;
                 dotfiles = ./dotfiles;
               };
+              home-manager.sharedModules = [
+                catppuccin.homeModules.catppuccin
+              ];
             }
           ];
         };

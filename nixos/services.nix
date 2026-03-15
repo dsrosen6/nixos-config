@@ -4,10 +4,10 @@
     # and makes things big slow
     power-profiles-daemon.enable = false;
 
-    desktopManager.gnome.enable = true;
-    displayManager.gdm.enable = true;
-    gvfs.enable = true;
-    gnome.gnome-keyring.enable = true;
+    # desktopManager.gnome.enable = true;
+    # displayManager.gdm.enable = true;
+    desktopManager.plasma6.enable = true;
+    displayManager.sddm.enable = true;
     blueman.enable = true;
     xserver = {
       enable = true;
