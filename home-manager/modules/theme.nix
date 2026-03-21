@@ -1,8 +1,8 @@
 { pkgs, ... }:
 let
   catppuccin-kvantum = pkgs.catppuccin-kvantum.override {
-    accent = "teal";
     variant = "mocha";
+    accent = "teal";
   };
 in
 {
@@ -22,7 +22,10 @@ in
     };
 
     iconTheme = {
-      package = pkgs.papirus-icon-theme;
+      package = pkgs.catppuccin-papirus-folders.override {
+        flavor = "mocha";
+        accent = "teal";
+      };
       name = "Papirus";
     };
   };

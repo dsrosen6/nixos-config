@@ -11,7 +11,6 @@
     go-tools
     goose
     gopls
-    jetbrains.goland
     sqlc
   ];
 }
