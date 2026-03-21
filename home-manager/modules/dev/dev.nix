@@ -1,0 +1,61 @@
+{
+  pkgs,
+  pkgs-unstable,
+  dotfiles,
+  ...
+}:
+{
+  imports = [
+    ./ghostty.nix
+    ./zsh.nix
+  ];
+
+  home.sessionVariables = {
+    GOPATH = "$HOME/go";
+    GOPROXY = "https://proxy.golang.org,direct";
+  };
+
+  home.packages = with pkgs; [
+    # General dev/terminal stuff
+    cargo
+    fd
+    fzf
+    gcc
+    gh
+    jq
+    kitty
+    lazygit
+    lua
+    luarocks
+    neovim
+    python314
+    ripgrep
+    statix
+    tmux
+    vim
+    pkgs-unstable.claude-code
+
+    # Go and related packages
+    go_1_26
+    go-tools
+    goose
+    gopls
+    sqlc
+  ];
+
+  programs = {
+    zoxide.enable = true;
+
+    git = {
+      enable = true;
+      settings = {
+        user.name = "Danny Rosenthal";
+        user.email = "dsrosen6@gmail.com";
+      };
+    };
+  };
+
+  xdg.configFile = {
+    "tmux".source = "${dotfiles}/tmux";
+  };
+}

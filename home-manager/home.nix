@@ -1,19 +1,17 @@
 {
   pkgs,
-  pkgs-unstable,
   dotfiles,
   ...
 }:
 {
   imports = [
-    ./modules/hyprland/hypr.nix
     ./modules/1password.nix
     ./modules/cliphist.nix
-    ./modules/ghostty.nix
-    ./modules/go.nix
     ./modules/theme.nix
     ./modules/yazi.nix
-    ./modules/zsh.nix
+
+    ./modules/dev/dev.nix
+    ./modules/hyprland/hypr.nix
   ];
 
   home = {
@@ -29,36 +27,19 @@
     packages = with pkgs; [
       brightnessctl
       btop
-      cargo
       chromium
       discord
       fastfetch
-      fd
-      fzf
-      gcc
-      gh
       gnumake
       hyprpicker
-      jq
-      kitty
-      lazygit
       libnotify
-      lua
-      luarocks
-      neovim
       niv
       nixfmt-rfc-style
       nodejs
       obsidian
       pavucontrol
       playerctl
-      python314
-      ripgrep
       spotify
-      statix
-      tmux
-      vim
-      pkgs-unstable.claude-code
 
       nerd-fonts.jetbrains-mono
       nerd-fonts.ubuntu-sans
@@ -73,22 +54,12 @@
   };
 
   programs = {
-    zoxide.enable = true;
     firefox.enable = true;
-
-    git = {
-      enable = true;
-      settings = {
-        user.name = "Danny Rosenthal";
-        user.email = "dsrosen6@gmail.com";
-      };
-    };
   };
 
   xdg.configFile = {
     "colors".source = "${dotfiles}/colors";
     "easyeffects/output".source = "${dotfiles}/easyeffects";
     "scripts".source = "${dotfiles}/scripts";
-    "tmux".source = "${dotfiles}/tmux";
   };
 }
