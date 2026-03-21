@@ -12,7 +12,6 @@
     ./modules/ghostty.nix
     ./modules/go.nix
     ./modules/theme.nix
-    ./modules/tmux.nix
     ./modules/yazi.nix
     ./modules/zsh.nix
   ];
@@ -57,6 +56,7 @@
       ripgrep
       spotify
       statix
+      tmux
       vim
       pkgs-unstable.claude-code
 
@@ -86,8 +86,9 @@
   };
 
   xdg.configFile = {
-    "scripts".source = "${dotfiles}/scripts";
     "colors".source = "${dotfiles}/colors";
     "easyeffects/output".source = "${dotfiles}/easyeffects";
+    "scripts".source = "${dotfiles}/scripts";
+    "tmux".source = "${dotfiles}/tmux";
   };
 }
