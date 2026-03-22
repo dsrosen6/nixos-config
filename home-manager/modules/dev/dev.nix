@@ -6,6 +6,7 @@
 {
   imports = [
     ./ghostty.nix
+    ./tmux.nix
     ./zsh.nix
   ];
 
@@ -23,7 +24,6 @@
     gh
     jq
     kitty
-    lazygit
     lua
     luarocks
     neovim
@@ -42,6 +42,8 @@
   ];
 
   programs = {
+    fzf.enable = true;
+    lazygit.enable = true;
     zoxide.enable = true;
 
     git = {

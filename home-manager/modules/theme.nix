@@ -6,8 +6,6 @@ let
   };
 in
 {
-  catppuccin.flavor = "mocha";
-
   home.packages = with pkgs; [
     libsForQt5.qt5ct
     kdePackages.qt6ct
@@ -43,5 +41,23 @@ in
     package = pkgs.bibata-cursors;
     name = "Bibata-Modern-Classic";
     size = 24;
+  };
+
+  catppuccin = {
+    accent = "teal";
+    flavor = "mocha";
+
+    fzf.enable = true;
+    ghostty.enable = true;
+    lazygit.enable = true;
+    tmux.enable = true;
+    yazi.enable = true;
+    zsh-syntax-highlighting.enable = true;
+
+    # this doesn't seem to work, oh well
+    firefox = {
+      enable = true;
+      force = true;
+    };
   };
 }
