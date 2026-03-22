@@ -1,7 +1,6 @@
 {
   pkgs,
   pkgs-unstable,
-  dotfiles,
   ...
 }:
 {
@@ -31,7 +30,6 @@
     python314
     ripgrep
     statix
-    tmux
     vim
     pkgs-unstable.claude-code
 
@@ -53,9 +51,5 @@
         user.email = "dsrosen6@gmail.com";
       };
     };
-  };
-
-  xdg.configFile = {
-    "tmux".source = "${dotfiles}/tmux";
   };
 }
