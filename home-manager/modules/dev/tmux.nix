@@ -7,8 +7,8 @@
       set -g status-right '#[fg=#{@thm_crust},bg=#{@thm_teal}] session: #S '
       set -g status-right-length 100
       # Pipe to split horizontally 
-      bind "/" split-window -h
-      bind "'" split-window -v
+      bind "/" split-window -h -c '#{pane_current_path}'
+      bind "'" split-window -v -c '#{pane_current_path}'
 
       # Vim navigation keys for panes 
       # Overridden by Vim Tmux Navigator if current pane is vim/nvim
@@ -49,6 +49,13 @@
       bind-key -T copy-mode-vi 'C-k' select-pane -U
       bind-key -T copy-mode-vi 'C-l' select-pane -R
       bind-key -T copy-mode-vi 'C-\' select-pane -l
+
+      # Claude code persistent popup window
+      bind -r y run-shell '\
+        SESSION="claude-$(echo #{pane_current_path} | md5sum | cut -c1-8)"; \
+        tmux has-session -t "$SESSION" 2>/dev/null || \
+        tmux new-session -d -s "$SESSION" -c "#{pane_current_path}" "claude"; \
+        tmux display-popup -w80% -h80% -E "tmux attach-session -t $SESSION"'
 
       # Other stuff
       set -sg escape-time 5
