@@ -1,6 +1,5 @@
 {
   pkgs,
-  pkgs-unstable,
   ...
 }:
 {
@@ -31,7 +30,7 @@
     ripgrep
     statix
     vim
-    pkgs-unstable.claude-code
+    claude-code
 
     # Go and related packages
     go_1_26

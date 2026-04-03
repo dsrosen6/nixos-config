@@ -3,10 +3,10 @@
   inputs = {
     catppuccin = {
       url = "github:catppuccin/nix";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
-    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
+    claude-code.url = "github:sadjow/claude-code-nix";
     home-manager = {
       url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -16,32 +16,27 @@
   outputs =
     {
       catppuccin,
+      claude-code,
       nixpkgs,
-      nixpkgs-unstable,
       home-manager,
       ...
-    }@inputs:
+    }:
     let
       system = "x86_64-linux";
-      pkgs-unstable = import nixpkgs-unstable {
-        inherit system;
-        config.allowUnfree = true;
-      };
     in
     {
       nixosConfigurations = {
         thinkpad = nixpkgs.lib.nixosSystem {
           inherit system;
-          specialArgs = { inherit inputs pkgs-unstable; };
           modules = [
             ./hosts/thinkpad/config.nix
             home-manager.nixosModules.home-manager
 
             {
               home-manager.extraSpecialArgs = {
-                inherit inputs pkgs-unstable system;
                 dotfiles = ./dotfiles;
               };
+              nixpkgs.overlays = [ claude-code.overlays.default ];
               home-manager.sharedModules = [
                 catppuccin.homeModules.catppuccin
               ];
