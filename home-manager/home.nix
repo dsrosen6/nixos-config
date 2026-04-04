@@ -48,8 +48,6 @@
   };
 
   services = {
-    swaync.enable = true;
-    swayosd.enable = true;
     easyeffects.enable = true;
   };
 

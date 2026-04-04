@@ -1,5 +1,9 @@
+let
+  hlTarget = "wayland-session@Hyprland.target";
+in
 {
   pkgs,
+  lib,
   config,
   dotfiles,
   ...
@@ -28,8 +32,6 @@
     enable = true;
     systemd = {
       enable = true;
-      # prevent waybar from starting with KDE
-      target = "wayland-session@Hyprland.target";
     };
   };
 
@@ -39,5 +41,14 @@
     hyprpaper.enable = true;
     hyprpolkitagent.enable = true;
     hyprsunset.enable = true;
+    swaync.enable = true;
+    swayosd.enable = true;
+  };
+
+  # prevent these items from starting in other DEs
+  systemd.user.services = {
+    swaync.Install.WantedBy = lib.mkForce [ hlTarget ];
+    swayosd.Install.WantedBy = lib.mkForce [ hlTarget ];
+    waybar.Install.WantedBy = lib.mkForce [ hlTarget ];
   };
 }
