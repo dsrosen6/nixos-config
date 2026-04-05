@@ -32,6 +32,7 @@ in
     enable = true;
     systemd = {
       enable = true;
+      target = hlTarget;
     };
   };
 
@@ -45,10 +46,17 @@ in
     swayosd.enable = true;
   };
 
-  # prevent these items from starting in other DEs
+  # prevent these services from starting in other DEs
   systemd.user.services = {
-    swaync.Install.WantedBy = lib.mkForce [ hlTarget ];
-    swayosd.Install.WantedBy = lib.mkForce [ hlTarget ];
-    waybar.Install.WantedBy = lib.mkForce [ hlTarget ];
+    swaync = {
+      Unit.After = lib.mkForce [ hlTarget ];
+      Unit.PartOf = lib.mkForce [ hlTarget ];
+      Install.WantedBy = lib.mkForce [ hlTarget ];
+    };
+    swayosd = {
+      Unit.After = lib.mkForce [ hlTarget ];
+      Unit.PartOf = lib.mkForce [ hlTarget ];
+      Install.WantedBy = lib.mkForce [ hlTarget ];
+    };
   };
 }

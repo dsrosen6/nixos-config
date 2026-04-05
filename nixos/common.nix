@@ -4,9 +4,9 @@
     ./general.nix
     ./hardware.nix
     ./keyd.nix
-    ./logind.nix
     ./network.nix
     ./pkgs.nix
+    ./plasma.nix
     ./programs.nix
     ./services.nix
     ./users.nix

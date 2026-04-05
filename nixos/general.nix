@@ -2,8 +2,6 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  powerManagement.cpuFreqGovernor = "performance";
-
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"

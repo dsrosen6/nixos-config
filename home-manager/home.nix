@@ -11,7 +11,8 @@
     ./modules/yazi.nix
 
     ./modules/dev/dev.nix
-    ./modules/hyprland/hypr.nix
+    # commented out bc I am taking a break from hyprland
+    # ./modules/hyprland/hypr.nix
   ];
 
   home = {
@@ -34,7 +35,7 @@
       hyprpicker
       libnotify
       niv
-      nixfmt-rfc-style
+      nixfmt
       nodejs
       obsidian
       pavucontrol

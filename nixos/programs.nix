@@ -5,11 +5,5 @@
     _1password.enable = true; # op CLI
     zsh.enable = true;
     nix-ld.enable = true;
-
-    hyprland = {
-      enable = true;
-      withUWSM = true;
-      xwayland.enable = true;
-    };
   };
 }
